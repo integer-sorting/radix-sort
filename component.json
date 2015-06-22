@@ -1,0 +1,11 @@
+{
+	"description": "radixsort code bricks for JavaScript",
+	"license": "AGPL-3.0",
+	"repo": "aureooms/js-radixsort",
+	"name": "aureooms-js-radixsort",
+	"version": "0.0.0",
+	"scripts": [
+		"js/dist/radixsort.js"
+	],
+	"main": "js/dist/radixsort.js"
+}

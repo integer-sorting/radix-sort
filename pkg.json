@@ -1,0 +1,17 @@
+{
+	"name": "radixsort",
+	"out": "js/dist/",
+	"code": {
+		"test": [
+			"test",
+			"js"
+		],
+		"main": [
+			"js",
+			"dist",
+			"radixsort.js"
+		]
+	},
+	"debug": false,
+	"src": "js/src/"
+}

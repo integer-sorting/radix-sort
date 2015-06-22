@@ -1,0 +1,36 @@
+{
+	"spm": {
+		"main": "js/dist/radixsort.js"
+	},
+	"description": "radixsort code bricks for JavaScript",
+	"homepage": "http://aureooms.github.io/js-radixsort/",
+	"license": "AGPL-3.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/aureooms/js-radixsort.git"
+	},
+	"name": "aureooms-js-radixsort",
+	"author": "aureooms",
+	"devDependencies": {
+		"aureooms-node-package": "^4.2.3"
+	},
+	"bugs": {
+		"url": "https://github.com/aureooms/js-radixsort/issues"
+	},
+	"keywords": [
+		"bricks",
+		"ender",
+		"javascript",
+		"js",
+		"radixsort",
+		"sorting"
+	],
+	"version": "0.0.0",
+	"scripts": {
+		"build": "./node_modules/.bin/aureooms-node-package-build",
+		"doc": "./node_modules/.bin/groc",
+		"test": "./node_modules/.bin/aureooms-node-package-test"
+	},
+	"dependencies": {},
+	"main": "js/dist/radixsort.js"
+}
