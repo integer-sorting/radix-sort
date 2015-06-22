@@ -2,7 +2,7 @@
 let _stable = function ( split ) {
 
 	/**
-	 * In place implementation of radix sort. NOT STABLE.
+	 * In-place implementation of radix sort. NOT STABLE.
 	 *
 	 * @param {function} lsb takes two arguments `(key, shift)` and returns the least
 	 * significant bit of `key` shifted to the right by `shift` places.

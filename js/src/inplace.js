@@ -2,7 +2,7 @@
 let _inplace = function ( split ) {
 
 	/**
-	 * In place implementation of radix sort. NOT STABLE.
+	 * In-place implementation of radix sort. NOT STABLE.
 	 *
 	 * @param {function} msb takes two arguments `(key, shift)` and returns the most
 	 * significant bit of `key` shifted to the left by `shift` places.
