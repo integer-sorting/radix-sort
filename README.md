@@ -1,7 +1,7 @@
 [js-radixsort](http://aureooms.github.io/js-radixsort)
 ==
 
-radixsort code bricks for JavaScript. Parent is
+Radixsort code bricks for JavaScript. Parent is
 [aureooms/js-sort](https://github.com/aureooms/js-sort).
 
 [![NPM license](http://img.shields.io/npm/l/aureooms-js-radixsort.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-radixsort/master/LICENSE)
