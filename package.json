@@ -12,7 +12,7 @@
 	"name": "aureooms-js-radixsort",
 	"author": "aureooms",
 	"devDependencies": {
-		"aureooms-node-package": "^4.2.3"
+		"aureooms-node-package": "^7.0.0"
 	},
 	"bugs": {
 		"url": "https://github.com/aureooms/js-radixsort/issues"
