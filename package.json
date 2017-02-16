@@ -9,7 +9,7 @@
 		"type": "git",
 		"url": "https://github.com/aureooms/js-radixsort.git"
 	},
-	"name": "aureooms-js-radixsort",
+	"name": "@aureooms/js-radixsort",
 	"author": "aureooms",
 	"devDependencies": {
 		"aureooms-node-package": "^4.2.3"
