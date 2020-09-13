@@ -1,4 +1,4 @@
-[js-radixsort](http://aureooms.github.io/js-radixsort)
+[@aureooms/js-radixsort](https://aureooms.github.io/js-radixsort)
 ==
 
 Radixsort code bricks for JavaScript. Parent is
