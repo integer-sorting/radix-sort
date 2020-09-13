@@ -48,7 +48,8 @@
     "test": "ava",
     "esdoc": "esdoc",
     "lint": "true",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "cover": "nyc --reporter=lcov npm test"
   },
   "dependencies": {},
   "main": "lib/index.js",
