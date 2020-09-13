@@ -1,6 +1,8 @@
+import test from 'ava';
+import * as radixsort from '../../src';
 
-test( "dummy" , function ( ) {
+test( "dummy" , t => {
 
-	ok( true , "tests implemented" ) ;
+	t.truthy( true , "tests implemented" ) ;
 
 } ) ;
