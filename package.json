@@ -1,7 +1,4 @@
 {
-  "spm": {
-    "main": "js/dist/radixsort.js"
-  },
   "description": "radixsort code bricks for JavaScript",
   "homepage": "http://aureooms.github.io/js-radixsort/",
   "license": "AGPL-3.0",
