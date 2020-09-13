@@ -1,57 +1,18 @@
 {
-  "description": "radixsort code bricks for JavaScript",
-  "homepage": "http://aureooms.github.io/js-radixsort/",
-  "license": "AGPL-3.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/aureooms/js-radixsort.git"
-  },
   "name": "@aureooms/js-radixsort",
-  "author": "aureooms",
-  "devDependencies": {
-    "@babel/cli": "7.11.6",
-    "@babel/core": "7.11.6",
-    "@babel/preset-env": "7.11.5",
-    "@babel/register": "7.11.5",
-    "ava": "3.12.1",
-    "babel-plugin-transform-remove-console": "6.9.4",
-    "babel-plugin-unassert": "3.0.1",
-    "babel-preset-power-assert": "3.0.0",
-    "coveralls": "3.1.0",
-    "esdoc": "1.1.0",
-    "esdoc-inject-script-plugin": "1.0.0",
-    "esdoc-inject-style-plugin": "1.0.0",
-    "esdoc-standard-plugin": "1.0.0",
-    "np": "6.5.0",
-    "nyc": "15.1.0",
-    "power-assert": "1.6.1",
-    "regenerator-runtime": "0.13.7"
-  },
-  "bugs": {
-    "url": "https://github.com/aureooms/js-radixsort/issues"
-  },
-  "keywords": [
-    "bricks",
-    "ender",
-    "javascript",
-    "js",
-    "radixsort",
-    "sorting"
-  ],
+  "description": "radixsort code bricks for JavaScript",
   "version": "0.0.1",
-  "scripts": {
-    "build": "babel --delete-dir-on-start --env-name production src -d lib",
-    "test": "ava",
-    "esdoc": "esdoc",
-    "lint": "true",
-    "prepare": "npm run build",
-    "cover": "nyc --reporter=lcov npm test",
-    "dev": "npm run lint -- --fix && npm run cover -- -- -st --fail-fast",
-    "travis": "npm run lint && npm run cover",
-    "release": "np"
+  "author": "aureooms",
+  "ava": {
+    "files": [
+      "test/src/**/*"
+    ],
+    "require": [
+      "regenerator-runtime/runtime",
+      "@babel/register"
+    ],
+    "timeout": "1m"
   },
-  "dependencies": {},
-  "main": "lib/index.js",
   "babel": {
     "presets": [
       "@babel/preset-env"
@@ -111,18 +72,57 @@
       }
     }
   },
-  "ava": {
-    "files": [
-      "test/src/**/*"
-    ],
-    "require": [
-      "regenerator-runtime/runtime",
-      "@babel/register"
-    ],
-    "timeout": "1m"
+  "bugs": {
+    "url": "https://github.com/aureooms/js-radixsort/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "7.11.6",
+    "@babel/core": "7.11.6",
+    "@babel/preset-env": "7.11.5",
+    "@babel/register": "7.11.5",
+    "ava": "3.12.1",
+    "babel-plugin-transform-remove-console": "6.9.4",
+    "babel-plugin-unassert": "3.0.1",
+    "babel-preset-power-assert": "3.0.0",
+    "coveralls": "3.1.0",
+    "esdoc": "1.1.0",
+    "esdoc-inject-script-plugin": "1.0.0",
+    "esdoc-inject-style-plugin": "1.0.0",
+    "esdoc-standard-plugin": "1.0.0",
+    "np": "6.5.0",
+    "nyc": "15.1.0",
+    "power-assert": "1.6.1",
+    "regenerator-runtime": "0.13.7"
   },
   "files": [
     "lib"
   ],
+  "homepage": "http://aureooms.github.io/js-radixsort/",
+  "keywords": [
+    "bricks",
+    "ender",
+    "javascript",
+    "js",
+    "radixsort",
+    "sorting"
+  ],
+  "license": "AGPL-3.0",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aureooms/js-radixsort.git"
+  },
+  "scripts": {
+    "build": "babel --delete-dir-on-start --env-name production src -d lib",
+    "cover": "nyc --reporter=lcov npm test",
+    "dev": "npm run lint -- --fix && npm run cover -- -- -st --fail-fast",
+    "esdoc": "esdoc",
+    "lint": "true",
+    "prepare": "npm run build",
+    "release": "np",
+    "test": "ava",
+    "travis": "npm run lint && npm run cover"
+  },
   "sideEffects": false
 }
