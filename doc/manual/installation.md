@@ -8,15 +8,15 @@ or [jspm](https://jspm.org/docs).
 
 ### yarn
 ```terminal
-yarn add @aureooms/js-radixsort
+yarn add @aureooms/js-radix-sort
 ```
 
 ### npm
 ```terminal
-npm install @aureooms/js-radixsort --save
+npm install @aureooms/js-radix-sort --save
 ```
 
 ### jspm
 ```terminal
-jspm install npm:@aureooms/js-radixsort
+jspm install npm:@aureooms/js-radix-sort
 ```

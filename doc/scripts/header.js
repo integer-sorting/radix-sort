@@ -13,14 +13,14 @@ domReady(function(){
 
 	var projectname = document.createElement('a');
 	projectname.classList.add('project-name');
-	projectname.text = 'aureooms/js-radixsort';
+	projectname.text = 'aureooms/js-radix-sort';
 	projectname.href = './index.html' ;
 
 	var header = document.getElementsByTagName('header')[0] ;
 	header.insertBefore(projectname,header.firstChild);
 
 	var testlink = document.querySelector('header > a[data-ice="testLink"]') ;
-	testlink.href = 'https://coveralls.io/github/aureooms/js-radixsort' ;
+	testlink.href = 'https://coveralls.io/github/aureooms/js-radix-sort' ;
 	testlink.target = '_BLANK' ;
 
 	var searchBox = document.querySelector('.search-box');

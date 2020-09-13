@@ -12,7 +12,7 @@ import 'regenerator-runtime/runtime.js' ;
 
 Then, import the library where needed
 ```js
-const radixsort = require( '@aureooms/js-radixsort' ) ;
+const radixsort = require( '@aureooms/js-radix-sort' ) ;
 // or
-import * as radixsort from '@aureooms/js-radixsort' ;
+import * as radixsort from '@aureooms/js-radix-sort' ;
 ```

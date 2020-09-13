@@ -13,7 +13,7 @@
           "autoPrivate": true
         },
         "brand": {
-          "title": "@aureooms/js-radixsort"
+          "title": "@aureooms/js-radix-sort"
         },
         "test": {
           "type": "ava",

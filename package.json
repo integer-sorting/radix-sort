@@ -1,6 +1,6 @@
 {
-  "name": "@aureooms/js-radixsort",
-  "description": "radixsort code bricks for JavaScript",
+  "name": "@aureooms/js-radix-sort",
+  "description": "Radix sorting algorithms for JavaScript",
   "version": "0.0.1",
   "author": "aureooms",
   "ava": {
@@ -73,7 +73,7 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/aureooms/js-radixsort/issues"
+    "url": "https://github.com/aureooms/js-radix-sort/issues"
   },
   "dependencies": {},
   "devDependencies": {
@@ -98,20 +98,25 @@
   "files": [
     "lib"
   ],
-  "homepage": "http://aureooms.github.io/js-radixsort/",
+  "homepage": "http://aureooms.github.io/js-radix-sort/",
   "keywords": [
-    "bricks",
-    "ender",
+    "algorithms",
+    "linear-time",
+    "sorting",
+    "sorting-algorithms",
     "javascript",
-    "js",
-    "radixsort",
-    "sorting"
+    "agpl",
+    "radix",
+    "radix-sort",
+    "radix-sort-algorithm",
+    "word-ram",
+    "word-ram-model"
   ],
   "license": "AGPL-3.0",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aureooms/js-radixsort.git"
+    "url": "https://github.com/aureooms/js-radix-sort.git"
   },
   "scripts": {
     "build": "babel --delete-dir-on-start --env-name production src -d lib",
