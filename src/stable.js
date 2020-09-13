@@ -1,5 +1,5 @@
 
-let _stable = function ( split ) {
+export function _stable ( split ) {
 
 	/**
 	 * In-place implementation of radix sort. NOT STABLE.
@@ -39,6 +39,5 @@ let _stable = function ( split ) {
 
 	return stable ;
 
-} ;
+}
 
-exports._stable = _stable ;

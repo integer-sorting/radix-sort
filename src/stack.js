@@ -15,7 +15,7 @@
  *
  */
 
-let stack = function ( lsb , main , hi , lo , si , sj ) {
+export function stack ( lsb , main , hi , lo , si , sj ) {
 
 	if ( si >= sj ) return ;
 
@@ -35,6 +35,5 @@ let stack = function ( lsb , main , hi , lo , si , sj ) {
 
 	stack( lsb , main , hi , lo , si + 1 , sj ) ;
 
-} ;
+}
 
-exports.stack = stack ;

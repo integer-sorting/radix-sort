@@ -15,7 +15,7 @@
  *
  */
 
-let nodes = function ( lsb , head , hi , lo , si , sj ) {
+export function nodes ( lsb , head , hi , lo , si , sj ) {
 
 	if ( si >= sj ) return head ;
 
@@ -49,6 +49,5 @@ let nodes = function ( lsb , head , hi , lo , si , sj ) {
 
 	return nodes( lsb , head , hi , lo , si + 1 , sj ) ;
 
-} ;
+}
 
-exports.nodes = nodes ;
