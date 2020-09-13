@@ -45,8 +45,8 @@
   "version": "0.0.1",
   "scripts": {
     "build": "./node_modules/.bin/aureooms-node-package-build",
-    "doc": "./node_modules/.bin/groc",
-    "test": "./node_modules/.bin/aureooms-node-package-test"
+    "test": "./node_modules/.bin/aureooms-node-package-test",
+    "esdoc": "esdoc"
   },
   "dependencies": {},
   "main": "js/dist/radixsort.js"
