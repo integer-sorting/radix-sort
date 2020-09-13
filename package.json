@@ -44,13 +44,13 @@
   ],
   "version": "0.0.1",
   "scripts": {
-    "build": "./node_modules/.bin/aureooms-node-package-build",
+    "build": "babel --delete-dir-on-start --env-name production src -d lib",
     "test": "ava",
     "esdoc": "esdoc",
     "lint": "true"
   },
   "dependencies": {},
-  "main": "js/dist/radixsort.js",
+  "main": "lib/index.js",
   "babel": {
     "presets": [
       "@babel/preset-env"
