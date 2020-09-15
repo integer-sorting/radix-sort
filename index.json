@@ -1,0 +1,1661 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/array/accumulate.js",
+    "content": "import assert from 'assert';\n\n/**\n * O(M) time where M=j-i.\n */\nconst accumulate = (array, i, j) => {\n\tassert(i >= 0 && j <= array.length);\n\tfor (++i; i < j; ++i) {\n\t\tarray[i] += array[i - 1];\n\t}\n};\n\nexport default accumulate;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/accumulate.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "function",
+    "name": "accumulate",
+    "memberof": "src/array/accumulate.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/array/accumulate.js~accumulate",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/accumulate.js",
+    "importStyle": "accumulate",
+    "description": "O(M) time where M=j-i.",
+    "lineNumber": 6,
+    "params": [
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "i",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "j",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 50,
+    "kind": "file",
+    "name": "src/array/alloc.js",
+    "content": "const alloc = (n) => new Int32Array(n);\nexport default alloc;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/alloc.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 51,
+    "kind": "function",
+    "name": "alloc",
+    "memberof": "src/array/alloc.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/array/alloc.js~alloc",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/alloc.js",
+    "importStyle": "alloc",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "n",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 52,
+    "kind": "file",
+    "name": "src/array/compose.js",
+    "content": "import assert from 'assert';\n\nconst compose = (sigma, tau) => {\n\tconsole.debug('compose', sigma, tau);\n\tconst N = sigma.length;\n\tassert(sigma.length === tau.length);\n\tfor (let i = 0; i < N; ++i) {\n\t\ttau[i] = sigma[tau[i]];\n\t}\n};\n\nexport default compose;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/compose.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 53,
+    "kind": "function",
+    "name": "compose",
+    "memberof": "src/array/compose.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/array/compose.js~compose",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/compose.js",
+    "importStyle": "compose",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "params": [
+      {
+        "name": "sigma",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "tau",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 54,
+    "kind": "file",
+    "name": "src/array/cumulativeHistogram.js",
+    "content": "import assert from 'assert';\nimport histogram from './histogram';\nimport accumulate from './accumulate';\n\n/**\n * O(M+N) time where N=j-i and M = ch.length - offset.\n */\nconst cumulativeHistogram = (array, i, j, ch, offset) => {\n\tassert(Number.isInteger(offset));\n\tassert(i >= 0 && i <= j && j <= array.length);\n\thistogram(array, i, j, ch, offset); // O(N)\n\taccumulate(ch, offset, ch.length); // O(M)\n};\n\nexport default cumulativeHistogram;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/cumulativeHistogram.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 55,
+    "kind": "function",
+    "name": "cumulativeHistogram",
+    "memberof": "src/array/cumulativeHistogram.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/array/cumulativeHistogram.js~cumulativeHistogram",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/cumulativeHistogram.js",
+    "importStyle": "cumulativeHistogram",
+    "description": "O(M+N) time where N=j-i and M = ch.length - offset.",
+    "lineNumber": 8,
+    "params": [
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "i",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "j",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "ch",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "offset",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 56,
+    "kind": "file",
+    "name": "src/array/digits.js",
+    "content": "import alloc from './alloc';\nimport load from './load';\n\nexport default function* digits(tuples, i, j, s, t) {\n\tconst buffer = alloc(j - i);\n\tfor (--t; s <= t; --t) {\n\t\t// O(kN) where k = t - s\n\t\tload(t, tuples, i, j, buffer);\n\t\tyield buffer;\n\t}\n}\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/digits.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 57,
+    "kind": "function",
+    "name": "digits",
+    "memberof": "src/array/digits.js",
+    "generator": true,
+    "async": false,
+    "static": true,
+    "longname": "src/array/digits.js~digits",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/digits.js",
+    "importStyle": "digits",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [
+      {
+        "name": "tuples",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "i",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "j",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "s",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "t",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 58,
+    "kind": "file",
+    "name": "src/array/fill.js",
+    "content": "const fill = (array, x, i, j) => array.fill(x, i, j);\nexport default fill;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/fill.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 59,
+    "kind": "function",
+    "name": "fill",
+    "memberof": "src/array/fill.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/array/fill.js~fill",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/fill.js",
+    "importStyle": "fill",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "x",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "i",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "j",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 60,
+    "kind": "file",
+    "name": "src/array/histogram.js",
+    "content": "import assert from 'assert';\n\n/**\n * O(N) time where N = j - i;\n */\nconst histogram = (array, i, j, output, offset) => {\n\tassert(Number.isInteger(offset));\n\tassert(i >= 0 && j <= array.length);\n\tfor (; i < j; ++i) {\n\t\tconst key = offset + array[i];\n\t\tassert(key >= 0 && key < output.length);\n\t\t++output[key];\n\t}\n};\n\nexport default histogram;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/histogram.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 61,
+    "kind": "function",
+    "name": "histogram",
+    "memberof": "src/array/histogram.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/array/histogram.js~histogram",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/histogram.js",
+    "importStyle": "histogram",
+    "description": "O(N) time where N = j - i;",
+    "lineNumber": 6,
+    "params": [
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "i",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "j",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "output",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "offset",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 62,
+    "kind": "file",
+    "name": "src/array/load.js",
+    "content": "import assert from 'assert';\n\nconst load = (s, tuples, i, j, buffer) => {\n\tassert(buffer.length >= j - i);\n\tfor (let pt = 0; i < j; ++i) {\n\t\tconst tuple = tuples[i];\n\t\tassert(s >= 0 && s < tuple.length);\n\t\t// Assert(0 <= tuple[s] && tuple[s] < M);\n\t\tbuffer[pt++] = tuple[s];\n\t}\n};\n\nexport default load;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/load.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 63,
+    "kind": "function",
+    "name": "load",
+    "memberof": "src/array/load.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/array/load.js~load",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/load.js",
+    "importStyle": "load",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "params": [
+      {
+        "name": "s",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "tuples",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "i",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "j",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "buffer",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 64,
+    "kind": "file",
+    "name": "src/array/loadLengths.js",
+    "content": "const loadLengths = (tuples, i, N, buffer) => {\n\tlet maxLength = 0;\n\tfor (; i < N; ++i) {\n\t\tconst tuple = tuples[i];\n\t\tbuffer[i] = tuple.length;\n\t\tmaxLength = Math.max(maxLength, tuple.length);\n\t}\n\n\treturn maxLength + 1;\n};\n\nexport default loadLengths;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/loadLengths.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 65,
+    "kind": "function",
+    "name": "loadLengths",
+    "memberof": "src/array/loadLengths.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/array/loadLengths.js~loadLengths",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/loadLengths.js",
+    "importStyle": "loadLengths",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "tuples",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "i",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "N",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "buffer",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "file",
+    "name": "src/array/permute.js",
+    "content": "import assert from 'assert';\n\nconst permute = (permutation, array, ai, aj, output, oi) => {\n\tconsole.debug('permute', permutation, array, ai, aj, output, oi);\n\tassert(Number.isInteger(ai));\n\tassert(Number.isInteger(aj));\n\tassert(Number.isInteger(oi));\n\tconst N = aj - ai; // Only used in assert\n\tconst oj = oi + N; // Only used in assert\n\tassert(ai >= 0 && aj <= array.length);\n\tassert(permutation.length >= N);\n\tassert(oi >= 0 && oj <= output.length);\n\tfor (let i = 0; i < N; ++i) {\n\t\tassert(permutation[i] >= 0 && permutation[i] < N);\n\t\toutput[oi + permutation[i]] = array[ai + i];\n\t}\n};\n\nexport default permute;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/permute.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 67,
+    "kind": "function",
+    "name": "permute",
+    "memberof": "src/array/permute.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/array/permute.js~permute",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/permute.js",
+    "importStyle": "permute",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "params": [
+      {
+        "name": "permutation",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "ai",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "aj",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "output",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "oi",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 68,
+    "kind": "file",
+    "name": "src/array/permuteInPlace.js",
+    "content": "import assert from 'assert';\n\nconst permuteInPlace = (permutation, array) => {\n\tassert(permutation.length === array.length);\n\tconst N = permutation.length;\n\tfor (let i = 0; i < N; ++i) {\n\t\t// Exhaust all cycles\n\t\tlet j = permutation[i];\n\t\twhile (i !== j) {\n\t\t\tlet temporary = array[j];\n\t\t\tarray[j] = array[i];\n\t\t\tarray[i] = temporary;\n\t\t\ttemporary = j;\n\t\t\tj = permutation[j];\n\t\t\tpermutation[j] = temporary;\n\t\t}\n\t}\n};\n\nexport default permuteInPlace;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/permuteInPlace.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 69,
+    "kind": "function",
+    "name": "permuteInPlace",
+    "memberof": "src/array/permuteInPlace.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/array/permuteInPlace.js~permuteInPlace",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/permuteInPlace.js",
+    "importStyle": "permuteInPlace",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "params": [
+      {
+        "name": "permutation",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 70,
+    "kind": "file",
+    "name": "src/array/rank.js",
+    "content": "import assert from 'assert';\n\n/**\n * O(n) time.\n *\n * @param {Array} ch The cumulative histogram of the input.\n * @param {Array} array The input array to sort.\n * @param {Number} i Inclusive left boundary of the array.\n * @param {Number} j Non-inclusive right boundary of the array.\n * @param {Array} permutation The output permutation.\n */\nconst rank = (ch, array, i, j, permutation) => {\n\tassert(i >= 0 && j <= array.length);\n\tassert(i >= 0 && j <= permutation.length);\n\tfor (; i < j; ++i) {\n\t\tassert(array[i] >= 0 && array[i] < ch.length);\n\t\tassert(ch[array[i]] >= 0 && ch[array[i]] < permutation.length);\n\t\tpermutation[i] = ch[array[i]]++;\n\t}\n};\n\nexport default rank;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/rank.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 71,
+    "kind": "function",
+    "name": "rank",
+    "memberof": "src/array/rank.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/array/rank.js~rank",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/rank.js",
+    "importStyle": "rank",
+    "description": "O(n) time.",
+    "lineNumber": 12,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ch",
+        "description": "The cumulative histogram of the input."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "array",
+        "description": "The input array to sort."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "i",
+        "description": "Inclusive left boundary of the array."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "j",
+        "description": "Non-inclusive right boundary of the array."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "permutation",
+        "description": "The output permutation."
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 72,
+    "kind": "file",
+    "name": "src/array/reset.js",
+    "content": "import fill from './fill';\nconst reset = (array, i, j) => fill(array, 0, i, j);\nexport default reset;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/reset.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 73,
+    "kind": "function",
+    "name": "reset",
+    "memberof": "src/array/reset.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/array/reset.js~reset",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/reset.js",
+    "importStyle": "reset",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "params": [
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "i",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "j",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 74,
+    "kind": "file",
+    "name": "src/array/sort.js",
+    "content": "import assert from 'assert';\nimport sortFixedLengthTuples from './sortFixedLengthTuples';\nimport sortArbitraryTuples from './sortArbitraryTuples';\n\nconst sort = (k, M, tuples) => {\n\tassert(Number.isInteger(k));\n\tassert(Number.isInteger(M));\n\tconsole.debug('sort', k, tuples);\n\tif (k === 0) {\n\t\treturn tuples;\n\t}\n\n\tconst N = tuples.length;\n\tif (N <= 1) {\n\t\treturn tuples;\n\t}\n\n\tconst output = new Array(N);\n\tif (k >= 1) {\n\t\treturn sortFixedLengthTuples(k, M, tuples, output, 0, N);\n\t}\n\n\treturn sortArbitraryTuples(M, tuples, output);\n};\n\nexport default sort;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/sort.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 75,
+    "kind": "function",
+    "name": "sort",
+    "memberof": "src/array/sort.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/array/sort.js~sort",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/sort.js",
+    "importStyle": "sort",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [
+      {
+        "name": "k",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "M",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "tuples",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 76,
+    "kind": "file",
+    "name": "src/array/sortArbitraryTuples.js",
+    "content": "import permute from './permute';\nimport sortTuplesByLength from './sortTuplesByLength';\nimport sortFixedLengthTuples from './sortFixedLengthTuples';\n\nconst sortArbitraryTuples = (M, tuples, output) => {\n\tconst N = tuples.length;\n\tconst [ch, permutation] = sortTuplesByLength(tuples);\n\tpermute(permutation, tuples, 0, N, output, 0); // O(N)\n\tconst groups = ch.length - 1;\n\tconsole.debug('sortArbitraryTuples', ch, groups);\n\tfor (let g = 1; g < groups; ++g) {\n\t\tconst i = ch[g - 1];\n\t\tconst j = ch[g];\n\t\tsortFixedLengthTuples(g, M, output, tuples, i, j);\n\t}\n\n\treturn tuples;\n};\n\nexport default sortArbitraryTuples;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/sortArbitraryTuples.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 77,
+    "kind": "function",
+    "name": "sortArbitraryTuples",
+    "memberof": "src/array/sortArbitraryTuples.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/array/sortArbitraryTuples.js~sortArbitraryTuples",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/sortArbitraryTuples.js",
+    "importStyle": "sortArbitraryTuples",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [
+      {
+        "name": "M",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "tuples",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "output",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 78,
+    "kind": "file",
+    "name": "src/array/sortFixedLengthTuples.js",
+    "content": "import assert from 'assert';\nimport alloc from './alloc';\nimport load from './load';\nimport digits from './digits';\nimport stable from './stable';\nimport permute from './permute';\n\n/**\n * O(kM + kN) time where k is the number of digits per tuple, M is the radix, and\n * N = j - i is the number of tuples. The product kN corresponds to the input size.\n */\nconst sortFixedLengthTuples = (k, M, tuples, output, i, j) => {\n\tconsole.debug('sortFixedLengthTuples', k, M, tuples, output, i, j);\n\tassert(k >= 1);\n\tconst N = j - i;\n\tassert(N >= 2);\n\tconst first = alloc(N);\n\tload(k - 1, tuples, i, j, first);\n\tconst rest = digits(tuples, i, j, 0, k - 1);\n\tconst permutation = stable(M, first, rest); // O(kN + kM)\n\tconsole.debug(permutation, tuples);\n\tpermute(permutation, tuples, i, j, output, i); // O(N)\n\treturn output;\n};\n\nexport default sortFixedLengthTuples;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/sortFixedLengthTuples.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 79,
+    "kind": "function",
+    "name": "sortFixedLengthTuples",
+    "memberof": "src/array/sortFixedLengthTuples.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/array/sortFixedLengthTuples.js~sortFixedLengthTuples",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/sortFixedLengthTuples.js",
+    "importStyle": "sortFixedLengthTuples",
+    "description": "O(kM + kN) time where k is the number of digits per tuple, M is the radix, and\nN = j - i is the number of tuples. The product kN corresponds to the input size.",
+    "lineNumber": 12,
+    "params": [
+      {
+        "name": "k",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "M",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "tuples",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "output",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "i",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "j",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 80,
+    "kind": "file",
+    "name": "src/array/sortTuplesByLength.js",
+    "content": "import assert from 'assert';\nimport alloc from './alloc';\nimport zeros from './zeros';\nimport cumulativeHistogram from './cumulativeHistogram';\nimport rank from './rank';\n\nimport loadLengths from './loadLengths';\n\n/**\n * O(M + N) time where M is the maximum length of a tuple, and\n * N is the number of tuples.\n */\nconst sortTuplesByLength = (tuples) => {\n\tconsole.debug('sortTuplesByLength', tuples);\n\tassert(tuples !== undefined);\n\tconst N = tuples.length;\n\tconst lengths = alloc(N);\n\tconst M = loadLengths(tuples, 0, N, lengths);\n\tconst ch = zeros(M + 1); // O(M)\n\tcumulativeHistogram(lengths, 0, N, ch, 1); // O(N)\n\tconsole.debug('sortTuplesByLength step', lengths, ch);\n\tassert(ch[0] === 0);\n\tconst permutation = alloc(N);\n\trank(ch, lengths, 0, lengths.length, permutation); // O(N)\n\treturn [ch, permutation];\n};\n\nexport default sortTuplesByLength;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/sortTuplesByLength.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 81,
+    "kind": "function",
+    "name": "sortTuplesByLength",
+    "memberof": "src/array/sortTuplesByLength.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/array/sortTuplesByLength.js~sortTuplesByLength",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/sortTuplesByLength.js",
+    "importStyle": "sortTuplesByLength",
+    "description": "O(M + N) time where M is the maximum length of a tuple, and\nN is the number of tuples.",
+    "lineNumber": 13,
+    "params": [
+      {
+        "name": "tuples",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "undefined[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 82,
+    "kind": "file",
+    "name": "src/array/stable.js",
+    "content": "import assert from 'assert';\nimport {_identity} from '@aureooms/js-permutation';\nimport alloc from './alloc';\nimport zeros from './zeros';\nimport reset from './reset';\nimport cumulativeHistogram from './cumulativeHistogram';\nimport rank from './rank';\nimport permute from './permute';\nimport compose from './compose';\n\n/**\n * O(kM + kN) time where k is the number of arrays, M is the radix, and\n * N is the length of each array. The product kN corresponds to the input size.\n */\nconst stable = (M, current, rest) => {\n\tconsole.debug('stable', M, current, rest);\n\tassert(current !== undefined);\n\tconst N = current.length;\n\tconst permutation1 = alloc(N);\n\t_identity(permutation1, N);\n\tconst ch = zeros(M + 1); // O(M)\n\t// eslint-disable-next-line no-constant-condition\n\twhile (true) {\n\t\t// Repeated k times.\n\t\tcumulativeHistogram(current, 0, N, ch, 1); // O(N)\n\t\tconsole.debug('stable step', current, ch);\n\t\tassert(ch[0] === 0);\n\t\tconst permutation2 = alloc(N);\n\t\trank(ch, current, 0, current.length, permutation2); // O(N)\n\t\tcompose(permutation2, permutation1);\n\t\tconst {value: next, done} = rest.next();\n\t\tif (done) {\n\t\t\treturn permutation1;\n\t\t}\n\n\t\tassert(next.length === N);\n\t\tpermute(permutation1, next, 0, N, current, 0);\n\t\treset(ch); // O(M)\n\t}\n};\n\nexport default stable;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/stable.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 83,
+    "kind": "function",
+    "name": "stable",
+    "memberof": "src/array/stable.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/array/stable.js~stable",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/stable.js",
+    "importStyle": "stable",
+    "description": "O(kM + kN) time where k is the number of arrays, M is the radix, and\nN is the length of each array. The product kN corresponds to the input size.",
+    "lineNumber": 15,
+    "params": [
+      {
+        "name": "M",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "current",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "rest",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 84,
+    "kind": "file",
+    "name": "src/array/zeros.js",
+    "content": "const zeros = (n) => new Int32Array(n);\nexport default zeros;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/zeros.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 85,
+    "kind": "function",
+    "name": "zeros",
+    "memberof": "src/array/zeros.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/array/zeros.js~zeros",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-radix-sort/src/array/zeros.js",
+    "importStyle": "zeros",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "n",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 86,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-radix-sort/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "kind": "index",
+    "content": ":oden: [@aureooms/js-radix-sort](https://aureooms.github.io/js-radix-sort)\n==\n\nRadix sorting algorithms for JavaScript.\nParent is [@aureooms/js-sort](https://github.com/aureooms/js-sort).\n\n[![License](https://img.shields.io/github/license/aureooms/js-radix-sort.svg)](https://raw.githubusercontent.com/aureooms/js-radix-sort/master/LICENSE)\n[![Version](https://img.shields.io/npm/v/@aureooms/js-radix-sort.svg)](https://www.npmjs.org/package/@aureooms/js-radix-sort)\n[![Build](https://img.shields.io/travis/aureooms/js-radix-sort/master.svg)](https://travis-ci.org/aureooms/js-radix-sort/branches)\n[![Dependencies](https://img.shields.io/david/aureooms/js-radix-sort.svg)](https://david-dm.org/aureooms/js-radix-sort)\n[![Dev dependencies](https://img.shields.io/david/dev/aureooms/js-radix-sort.svg)](https://david-dm.org/aureooms/js-radix-sort?type=dev)\n[![GitHub issues](https://img.shields.io/github/issues/aureooms/js-radix-sort.svg)](https://github.com/aureooms/js-radix-sort/issues)\n[![Downloads](https://img.shields.io/npm/dm/@aureooms/js-radix-sort.svg)](https://www.npmjs.org/package/@aureooms/js-radix-sort)\n\n[![Code issues](https://img.shields.io/codeclimate/issues/aureooms/js-radix-sort.svg)](https://codeclimate.com/github/aureooms/js-radix-sort/issues)\n[![Code maintainability](https://img.shields.io/codeclimate/maintainability/aureooms/js-radix-sort.svg)](https://codeclimate.com/github/aureooms/js-radix-sort/trends/churn)\n[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-radix-sort/master.svg)](https://codecov.io/gh/aureooms/js-radix-sort)\n[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/aureooms/js-radix-sort.svg)](https://codeclimate.com/github/aureooms/js-radix-sort/trends/technical_debt)\n[![Documentation](https://aureooms.github.io/js-radix-sort//badge.svg)](https://aureooms.github.io/js-radix-sort//source.html)\n[![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-radix-sort)](https://bundlephobia.com/result?p=@aureooms/js-radix-sort)\n",
+    "longname": "/home/aureooms/dev/js/js-radix-sort/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"@aureooms/js-radix-sort\",\n  \"description\": \"Radix sorting algorithms for JavaScript\",\n  \"version\": \"1.0.0\",\n  \"author\": \"aureooms\",\n  \"ava\": {\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"require\": [\n      \"regenerator-runtime/runtime\",\n      \"@babel/register\"\n    ],\n    \"timeout\": \"1m\"\n  },\n  \"babel\": {\n    \"presets\": [\n      \"@babel/preset-env\"\n    ],\n    \"env\": {\n      \"test\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ],\n        \"plugins\": [\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"debug\",\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ],\n        \"sourceMaps\": \"inline\"\n      },\n      \"development\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ],\n        \"plugins\": [\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ],\n        \"sourceMaps\": \"inline\"\n      },\n      \"production\": {\n        \"plugins\": [\n          \"babel-plugin-unassert\",\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ],\n        \"sourceMaps\": \"inline\"\n      }\n    }\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/aureooms/js-radix-sort/issues\"\n  },\n  \"dependencies\": {\n    \"@aureooms/js-permutation\": \"^2.0.0\"\n  },\n  \"devDependencies\": {\n    \"@aureooms/js-compare\": \"^1.4.8\",\n    \"@aureooms/js-itertools\": \"^4.1.0\",\n    \"@babel/cli\": \"7.11.6\",\n    \"@babel/core\": \"7.11.6\",\n    \"@babel/preset-env\": \"7.11.5\",\n    \"@babel/register\": \"7.11.5\",\n    \"ava\": \"3.12.1\",\n    \"babel-plugin-transform-remove-console\": \"6.9.4\",\n    \"babel-plugin-unassert\": \"3.0.1\",\n    \"babel-preset-power-assert\": \"3.0.0\",\n    \"coveralls\": \"3.1.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"np\": \"6.5.0\",\n    \"nyc\": \"15.1.0\",\n    \"power-assert\": \"1.6.1\",\n    \"regenerator-runtime\": \"0.13.7\",\n    \"xo\": \"^0.33.1\"\n  },\n  \"files\": [\n    \"lib\"\n  ],\n  \"homepage\": \"http://aureooms.github.io/js-radix-sort/\",\n  \"keywords\": [\n    \"algorithms\",\n    \"linear-time\",\n    \"sorting\",\n    \"sorting-algorithms\",\n    \"javascript\",\n    \"agpl\",\n    \"radix\",\n    \"radix-sort\",\n    \"radix-sort-algorithm\",\n    \"word-ram\",\n    \"word-ram-model\"\n  ],\n  \"license\": \"AGPL-3.0\",\n  \"main\": \"lib/index.js\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/aureooms/js-radix-sort.git\"\n  },\n  \"scripts\": {\n    \"build\": \"babel --delete-dir-on-start --env-name production src -d lib\",\n    \"cover\": \"nyc --reporter=lcov npm test\",\n    \"dev\": \"npm run lint -- --fix && npm run cover -- -- -st --fail-fast\",\n    \"esdoc\": \"esdoc\",\n    \"lint\": \"xo\",\n    \"prepare\": \"npm run build\",\n    \"release\": \"np\",\n    \"test\": \"ava\",\n    \"travis\": \"npm run lint && npm run cover\"\n  },\n  \"sideEffects\": false,\n  \"xo\": {\n    \"prettier\": true,\n    \"ignore\": [\n      \"lib\",\n      \"doc\",\n      \"test/_old\"\n    ],\n    \"rules\": {\n      \"unicorn/filename-case\": [\n        \"error\",\n        {\n          \"case\": \"camelCase\"\n        }\n      ]\n    }\n  }\n}\n",
+    "longname": "/home/aureooms/dev/js/js-radix-sort/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manualIndex",
+    "globalIndex": false,
+    "content": null,
+    "longname": "",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/aureooms/dev/js/js-radix-sort/doc/manual/overview.md",
+    "name": "./doc/manual/overview.md",
+    "content": "# Overview\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/aureooms/dev/js/js-radix-sort/doc/manual/installation.md",
+    "name": "./doc/manual/installation.md",
+    "content": "# Installation\n\nCan be managed using\n[yarn](https://yarnpkg.com/en/docs),\n[npm](https://docs.npmjs.com),\nor [jspm](https://jspm.org/docs).\n\n\n### yarn\n```terminal\nyarn add @aureooms/js-radix-sort\n```\n\n### npm\n```terminal\nnpm install @aureooms/js-radix-sort --save\n```\n\n### jspm\n```terminal\njspm install npm:@aureooms/js-radix-sort\n```\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/aureooms/dev/js/js-radix-sort/doc/manual/usage.md",
+    "name": "./doc/manual/usage.md",
+    "content": "# Usage\n\n> :warning: The code requires `regeneratorRuntime` to be defined, for instance by importing\n> [regenerator-runtime/runtime](https://www.npmjs.com/package/regenerator-runtime).\n\nFirst, require the polyfill at the entry point of your application\n```js\nrequire( 'regenerator-runtime/runtime' );\n// or\nimport 'regenerator-runtime/runtime.js' ;\n```\n\nThen, import the library where needed\n```js\nconst radixsort = require( '@aureooms/js-radix-sort' ) ;\n// or\nimport * as radixsort from '@aureooms/js-radix-sort' ;\n```\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/aureooms/dev/js/js-radix-sort/doc/manual/example.md",
+    "name": "./doc/manual/example.md",
+    "content": "# Examples\n\n> More examples in [the test files](https://github.com/aureooms/js-radix-sort/tree/master/test/src).\n",
+    "static": true,
+    "access": "public"
+  }
+]

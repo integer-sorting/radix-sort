@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl">
-  <title data-ice="title">Home | @aureooms/js-radix-sort</title>
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/array/cumulativeHistogram.js | @aureooms/js-radix-sort</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -52,22 +52,24 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="-oden---a-href--https---aureooms-github-io-js-radix-sort---aureooms-js-radix-sort--a-">:oden: <a href="https://aureooms.github.io/js-radix-sort">@aureooms/js-radix-sort</a></h1><p>Radix sorting algorithms for JavaScript.
-Parent is <a href="https://github.com/aureooms/js-sort">@aureooms/js-sort</a>.</p>
-<p><a href="https://raw.githubusercontent.com/aureooms/js-radix-sort/master/LICENSE"><img src="https://img.shields.io/github/license/aureooms/js-radix-sort.svg" alt="License"></a>
-<a href="https://www.npmjs.org/package/@aureooms/js-radix-sort"><img src="https://img.shields.io/npm/v/@aureooms/js-radix-sort.svg" alt="Version"></a>
-<a href="https://travis-ci.org/aureooms/js-radix-sort/branches"><img src="https://img.shields.io/travis/aureooms/js-radix-sort/master.svg" alt="Build"></a>
-<a href="https://david-dm.org/aureooms/js-radix-sort"><img src="https://img.shields.io/david/aureooms/js-radix-sort.svg" alt="Dependencies"></a>
-<a href="https://david-dm.org/aureooms/js-radix-sort?type=dev"><img src="https://img.shields.io/david/dev/aureooms/js-radix-sort.svg" alt="Dev dependencies"></a>
-<a href="https://github.com/aureooms/js-radix-sort/issues"><img src="https://img.shields.io/github/issues/aureooms/js-radix-sort.svg" alt="GitHub issues"></a>
-<a href="https://www.npmjs.org/package/@aureooms/js-radix-sort"><img src="https://img.shields.io/npm/dm/@aureooms/js-radix-sort.svg" alt="Downloads"></a></p>
-<p><a href="https://codeclimate.com/github/aureooms/js-radix-sort/issues"><img src="https://img.shields.io/codeclimate/issues/aureooms/js-radix-sort.svg" alt="Code issues"></a>
-<a href="https://codeclimate.com/github/aureooms/js-radix-sort/trends/churn"><img src="https://img.shields.io/codeclimate/maintainability/aureooms/js-radix-sort.svg" alt="Code maintainability"></a>
-<a href="https://codecov.io/gh/aureooms/js-radix-sort"><img src="https://img.shields.io/codecov/c/gh/aureooms/js-radix-sort/master.svg" alt="Code coverage (cov)"></a>
-<a href="https://codeclimate.com/github/aureooms/js-radix-sort/trends/technical_debt"><img src="https://img.shields.io/codeclimate/tech-debt/aureooms/js-radix-sort.svg" alt="Code technical debt"></a>
-<a href="https://aureooms.github.io/js-radix-sort//source.html"><img src="https://aureooms.github.io/js-radix-sort//badge.svg" alt="Documentation"></a>
-<a href="https://bundlephobia.com/result?p=@aureooms/js-radix-sort"><img src="https://img.shields.io/bundlephobia/minzip/@aureooms/js-radix-sort" alt="Package size"></a></p>
-</div>
+<div class="content" data-ice="content"><h1 data-ice="title">src/array/cumulativeHistogram.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import assert from &apos;assert&apos;;
+import histogram from &apos;./histogram&apos;;
+import accumulate from &apos;./accumulate&apos;;
+
+/**
+ * O(M+N) time where N=j-i and M = ch.length - offset.
+ */
+const cumulativeHistogram = (array, i, j, ch, offset) =&gt; {
+	assert(Number.isInteger(offset));
+	assert(i &gt;= 0 &amp;&amp; i &lt;= j &amp;&amp; j &lt;= array.length);
+	histogram(array, i, j, ch, offset); // O(N)
+	accumulate(ch, offset, ch.length); // O(M)
+};
+
+export default cumulativeHistogram;
+</code></pre>
+
 </div>
 
 <footer class="footer">
