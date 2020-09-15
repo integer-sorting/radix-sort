@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/index.js | @aureooms/js-radix-sort</title>
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/array/api/sortUint32.js | @aureooms/js-radix-sort</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -55,9 +55,29 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/index.js</h1>
-<pre class="source-code line-number raw-source-code"></pre>
-<p data-ice="emptySourceCode">Sorry, this documentation does not provide source code.</p>
+<div class="content" data-ice="content"><h1 data-ice="title">src/array/api/sortUint32.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import sort from &apos;./sort&apos;;
+
+const sortUint32 = (array) =&gt; {
+	const k = 4; // TODO make it depend on array.length
+	const M = 2 ** 8; // TODO another good option is k = 3 M = 2**11
+	// TODO avoid copying back and forth
+	const tuples = Array.prototype.map.call(array, (x) =&gt; [
+		(x &amp; 0xff000000) &gt;&gt;&gt; 24,
+		(x &amp; 0xff0000) &gt;&gt;&gt; 16,
+		(x &amp; 0xff00) &gt;&gt;&gt; 8,
+		(x &amp; 0xff) &gt;&gt;&gt; 0
+	]);
+	const output = sort(k, M, tuples);
+	return Array.prototype.map.call(
+		output,
+		([a, b, c, d]) =&gt; ((a &lt;&lt; 24) | (b &lt;&lt; 16) | (c &lt;&lt; 8) | d) &gt;&gt;&gt; 0
+	);
+};
+
+export default sortUint32;
+</code></pre>
+
 </div>
 
 <footer class="footer">

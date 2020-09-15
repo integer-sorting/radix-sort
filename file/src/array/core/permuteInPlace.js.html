@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/index.js | @aureooms/js-radix-sort</title>
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/array/core/permuteInPlace.js | @aureooms/js-radix-sort</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -55,9 +55,29 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/index.js</h1>
-<pre class="source-code line-number raw-source-code"></pre>
-<p data-ice="emptySourceCode">Sorry, this documentation does not provide source code.</p>
+<div class="content" data-ice="content"><h1 data-ice="title">src/array/core/permuteInPlace.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import assert from &apos;assert&apos;;
+
+const permuteInPlace = (permutation, array) =&gt; {
+	assert(permutation.length === array.length);
+	const N = permutation.length;
+	for (let i = 0; i &lt; N; ++i) {
+		// Exhaust all cycles
+		let j = permutation[i];
+		while (i !== j) {
+			let temporary = array[j];
+			array[j] = array[i];
+			array[i] = temporary;
+			temporary = j;
+			j = permutation[j];
+			permutation[j] = temporary;
+		}
+	}
+};
+
+export default permuteInPlace;
+</code></pre>
+
 </div>
 
 <footer class="footer">

@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/index.js | @aureooms/js-radix-sort</title>
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/array/core/digits.js | @aureooms/js-radix-sort</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -55,9 +55,20 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/index.js</h1>
-<pre class="source-code line-number raw-source-code"></pre>
-<p data-ice="emptySourceCode">Sorry, this documentation does not provide source code.</p>
+<div class="content" data-ice="content"><h1 data-ice="title">src/array/core/digits.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import alloc from &apos;./alloc&apos;;
+import load from &apos;./load&apos;;
+
+export default function* digits(tuples, i, j, s, t) {
+	const buffer = alloc(j - i);
+	for (--t; s &lt;= t; --t) {
+		// O(kN) where k = t - s
+		load(t, tuples, i, j, buffer);
+		yield buffer;
+	}
+}
+</code></pre>
+
 </div>
 
 <footer class="footer">

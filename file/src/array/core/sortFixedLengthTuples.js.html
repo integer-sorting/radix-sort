@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/index.js | @aureooms/js-radix-sort</title>
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/array/core/sortFixedLengthTuples.js | @aureooms/js-radix-sort</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -55,9 +55,35 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/index.js</h1>
-<pre class="source-code line-number raw-source-code"></pre>
-<p data-ice="emptySourceCode">Sorry, this documentation does not provide source code.</p>
+<div class="content" data-ice="content"><h1 data-ice="title">src/array/core/sortFixedLengthTuples.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import assert from &apos;assert&apos;;
+import alloc from &apos;./alloc&apos;;
+import load from &apos;./load&apos;;
+import digits from &apos;./digits&apos;;
+import stable from &apos;./stable&apos;;
+import permute from &apos;./permute&apos;;
+
+/**
+ * O(kM + kN) time where k is the number of digits per tuple, M is the radix, and
+ * N = j - i is the number of tuples. The product kN corresponds to the input size.
+ */
+const sortFixedLengthTuples = (k, M, tuples, output, i, j) =&gt; {
+	console.debug(&apos;sortFixedLengthTuples&apos;, k, M, tuples, output, i, j);
+	assert(k &gt;= 1);
+	const N = j - i;
+	assert(N &gt;= 2);
+	const first = alloc(N);
+	load(k - 1, tuples, i, j, first);
+	const rest = digits(tuples, i, j, 0, k - 1);
+	const permutation = stable(M, first, rest); // O(kN + kM)
+	console.debug(permutation, tuples);
+	permute(permutation, tuples, i, j, output, i); // O(N)
+	return output;
+};
+
+export default sortFixedLengthTuples;
+</code></pre>
+
 </div>
 
 <footer class="footer">

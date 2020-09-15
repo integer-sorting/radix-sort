@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/index.js | @aureooms/js-radix-sort</title>
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/array/api/sortInt32.js | @aureooms/js-radix-sort</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -55,9 +55,20 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/index.js</h1>
-<pre class="source-code line-number raw-source-code"></pre>
-<p data-ice="emptySourceCode">Sorry, this documentation does not provide source code.</p>
+<div class="content" data-ice="content"><h1 data-ice="title">src/array/api/sortInt32.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import sortUint32 from &apos;./sortUint32&apos;;
+
+const sortInt32 = (array) =&gt; {
+	const shift = -(2 ** 31);
+	// TODO avoid copying back and forth
+	const data = Array.prototype.map.call(array, (x) =&gt; x - shift);
+	const output = sortUint32(data);
+	return Array.prototype.map.call(output, (x) =&gt; x + shift);
+};
+
+export default sortInt32;
+</code></pre>
+
 </div>
 
 <footer class="footer">

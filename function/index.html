@@ -29,7 +29,11 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#array">array</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-accumulate">accumulate</a></span></span></li>
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#array-api">array/api</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-sort">sort</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-sortFloat32">sortFloat32</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-sortInt32">sortInt32</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-sortUint32">sortUint32</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#array-core">array/core</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-accumulate">accumulate</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-alloc">alloc</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-compose">compose</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-cumulativeHistogram">cumulativeHistogram</a></span></span></li>
@@ -42,7 +46,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-permuteInPlace">permuteInPlace</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-rank">rank</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-reset">reset</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-sort">sort</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-sortArbitraryTuples">sortArbitraryTuples</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-sortFixedLengthTuples">sortFixedLengthTuples</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-sortTuplesByLength">sortTuplesByLength</a></span></span></li>
@@ -525,6 +528,62 @@ N = j - i is the number of tuples.</p>
           
           
           
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-sortFloat32">sortFloat32</a></span></span><span class="code" data-ice="signature">(array: <span>*</span>): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-sortInt32">sortInt32</a></span></span><span class="code" data-ice="signature">(array: <span>*</span>): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
           <span class="code" data-ice="name"><span><a href="function/index.html#static-function-sortTuplesByLength">sortTuplesByLength</a></span></span><span class="code" data-ice="signature">(tuples: <span>*</span>): <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span><span>[]</span></span></span>
         </p>
       </div>
@@ -534,6 +593,34 @@ N = j - i is the number of tuples.</p>
         <div data-ice="description"><p>O(M + N) time where M is the maximum length of a tuple, and
 N is the number of tuples.</p>
 </div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-sortUint32">sortUint32</a></span></span><span class="code" data-ice="signature">(array: <span>*</span>): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
       </div>
     </td>
     <td>
@@ -616,11 +703,11 @@ N is the length of each array.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/accumulate.js.html#lineNumber6">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/core/accumulate.js.html#lineNumber6">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import accumulate from &apos;<span><a href="file/src/array/accumulate.js.html#lineNumber6">@aureooms/js-radix-sort/src/array/accumulate.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import accumulate from &apos;<span><a href="file/src/array/core/accumulate.js.html#lineNumber6">@aureooms/js-radix-sort/src/array/core/accumulate.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>O(M) time where M=j-i.</p>
@@ -688,11 +775,11 @@ N is the length of each array.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/alloc.js.html#lineNumber1">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/core/alloc.js.html#lineNumber2">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import alloc from &apos;<span><a href="file/src/array/alloc.js.html#lineNumber1">@aureooms/js-radix-sort/src/array/alloc.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import alloc from &apos;<span><a href="file/src/array/core/alloc.js.html#lineNumber2">@aureooms/js-radix-sort/src/array/core/alloc.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -747,11 +834,11 @@ N is the length of each array.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/compose.js.html#lineNumber3">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/core/compose.js.html#lineNumber3">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import compose from &apos;<span><a href="file/src/array/compose.js.html#lineNumber3">@aureooms/js-radix-sort/src/array/compose.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import compose from &apos;<span><a href="file/src/array/core/compose.js.html#lineNumber3">@aureooms/js-radix-sort/src/array/core/compose.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -812,11 +899,11 @@ N is the length of each array.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/cumulativeHistogram.js.html#lineNumber8">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/core/cumulativeHistogram.js.html#lineNumber8">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import cumulativeHistogram from &apos;<span><a href="file/src/array/cumulativeHistogram.js.html#lineNumber8">@aureooms/js-radix-sort/src/array/cumulativeHistogram.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import cumulativeHistogram from &apos;<span><a href="file/src/array/core/cumulativeHistogram.js.html#lineNumber8">@aureooms/js-radix-sort/src/array/core/cumulativeHistogram.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>O(M+N) time where N=j-i and M = ch.length - offset.</p>
@@ -896,11 +983,11 @@ N is the length of each array.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/digits.js.html#lineNumber4">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/core/digits.js.html#lineNumber4">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import digits from &apos;<span><a href="file/src/array/digits.js.html#lineNumber4">@aureooms/js-radix-sort/src/array/digits.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import digits from &apos;<span><a href="file/src/array/core/digits.js.html#lineNumber4">@aureooms/js-radix-sort/src/array/core/digits.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -979,11 +1066,11 @@ N is the length of each array.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/fill.js.html#lineNumber1">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/core/fill.js.html#lineNumber1">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import fill from &apos;<span><a href="file/src/array/fill.js.html#lineNumber1">@aureooms/js-radix-sort/src/array/fill.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import fill from &apos;<span><a href="file/src/array/core/fill.js.html#lineNumber1">@aureooms/js-radix-sort/src/array/core/fill.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1056,11 +1143,11 @@ N is the length of each array.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/histogram.js.html#lineNumber6">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/core/histogram.js.html#lineNumber6">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import histogram from &apos;<span><a href="file/src/array/histogram.js.html#lineNumber6">@aureooms/js-radix-sort/src/array/histogram.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import histogram from &apos;<span><a href="file/src/array/core/histogram.js.html#lineNumber6">@aureooms/js-radix-sort/src/array/core/histogram.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>O(N) time where N = j - i;</p>
@@ -1140,11 +1227,11 @@ N is the length of each array.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/load.js.html#lineNumber3">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/core/load.js.html#lineNumber3">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import load from &apos;<span><a href="file/src/array/load.js.html#lineNumber3">@aureooms/js-radix-sort/src/array/load.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import load from &apos;<span><a href="file/src/array/core/load.js.html#lineNumber3">@aureooms/js-radix-sort/src/array/core/load.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1223,11 +1310,11 @@ N is the length of each array.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/loadLengths.js.html#lineNumber1">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/core/loadLengths.js.html#lineNumber1">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import loadLengths from &apos;<span><a href="file/src/array/loadLengths.js.html#lineNumber1">@aureooms/js-radix-sort/src/array/loadLengths.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import loadLengths from &apos;<span><a href="file/src/array/core/loadLengths.js.html#lineNumber1">@aureooms/js-radix-sort/src/array/core/loadLengths.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1312,11 +1399,11 @@ N is the length of each array.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/permute.js.html#lineNumber3">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/core/permute.js.html#lineNumber3">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import permute from &apos;<span><a href="file/src/array/permute.js.html#lineNumber3">@aureooms/js-radix-sort/src/array/permute.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import permute from &apos;<span><a href="file/src/array/core/permute.js.html#lineNumber3">@aureooms/js-radix-sort/src/array/core/permute.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1401,11 +1488,11 @@ N is the length of each array.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/permuteInPlace.js.html#lineNumber3">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/core/permuteInPlace.js.html#lineNumber3">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import permuteInPlace from &apos;<span><a href="file/src/array/permuteInPlace.js.html#lineNumber3">@aureooms/js-radix-sort/src/array/permuteInPlace.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import permuteInPlace from &apos;<span><a href="file/src/array/core/permuteInPlace.js.html#lineNumber3">@aureooms/js-radix-sort/src/array/core/permuteInPlace.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1466,11 +1553,11 @@ N is the length of each array.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/rank.js.html#lineNumber12">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/core/rank.js.html#lineNumber12">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import rank from &apos;<span><a href="file/src/array/rank.js.html#lineNumber12">@aureooms/js-radix-sort/src/array/rank.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import rank from &apos;<span><a href="file/src/array/core/rank.js.html#lineNumber12">@aureooms/js-radix-sort/src/array/core/rank.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>O(n) time.</p>
@@ -1555,11 +1642,11 @@ N is the length of each array.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/reset.js.html#lineNumber2">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/core/reset.js.html#lineNumber2">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import reset from &apos;<span><a href="file/src/array/reset.js.html#lineNumber2">@aureooms/js-radix-sort/src/array/reset.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import reset from &apos;<span><a href="file/src/array/core/reset.js.html#lineNumber2">@aureooms/js-radix-sort/src/array/core/reset.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1626,11 +1713,11 @@ N is the length of each array.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/sort.js.html#lineNumber5">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/api/sort.js.html#lineNumber5">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import sort from &apos;<span><a href="file/src/array/sort.js.html#lineNumber5">@aureooms/js-radix-sort/src/array/sort.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import sort from &apos;<span><a href="file/src/array/api/sort.js.html#lineNumber5">@aureooms/js-radix-sort/src/array/api/sort.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1709,11 +1796,11 @@ N is the length of each array.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/sortArbitraryTuples.js.html#lineNumber5">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/core/sortArbitraryTuples.js.html#lineNumber5">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import sortArbitraryTuples from &apos;<span><a href="file/src/array/sortArbitraryTuples.js.html#lineNumber5">@aureooms/js-radix-sort/src/array/sortArbitraryTuples.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import sortArbitraryTuples from &apos;<span><a href="file/src/array/core/sortArbitraryTuples.js.html#lineNumber5">@aureooms/js-radix-sort/src/array/core/sortArbitraryTuples.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1792,11 +1879,11 @@ N is the length of each array.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/sortFixedLengthTuples.js.html#lineNumber12">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/core/sortFixedLengthTuples.js.html#lineNumber12">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import sortFixedLengthTuples from &apos;<span><a href="file/src/array/sortFixedLengthTuples.js.html#lineNumber12">@aureooms/js-radix-sort/src/array/sortFixedLengthTuples.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import sortFixedLengthTuples from &apos;<span><a href="file/src/array/core/sortFixedLengthTuples.js.html#lineNumber12">@aureooms/js-radix-sort/src/array/core/sortFixedLengthTuples.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>O(kM + kN) time where k is the number of digits per tuple, M is the radix, and
@@ -1884,6 +1971,148 @@ N = j - i is the number of tuples. The product kN corresponds to the input size.
   
 </div>
 <div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-function-sortFloat32">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">sortFloat32</span><span class="code" data-ice="signature">(array: <span>*</span>): <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/array/api/sortFloat32.js.html#lineNumber15">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import sortFloat32 from &apos;<span><a href="file/src/array/api/sortFloat32.js.html#lineNumber15">@aureooms/js-radix-sort/src/array/api/sortFloat32.js</a></span>&apos;</code></pre></div>
+  
+  
+  
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">array</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-function-sortInt32">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">sortInt32</span><span class="code" data-ice="signature">(array: <span>*</span>): <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/array/api/sortInt32.js.html#lineNumber3">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import sortInt32 from &apos;<span><a href="file/src/array/api/sortInt32.js.html#lineNumber3">@aureooms/js-radix-sort/src/array/api/sortInt32.js</a></span>&apos;</code></pre></div>
+  
+  
+  
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">array</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="static-function-sortTuplesByLength">
     <span class="access" data-ice="access">public</span>
     
@@ -1895,11 +2124,11 @@ N = j - i is the number of tuples. The product kN corresponds to the input size.
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/sortTuplesByLength.js.html#lineNumber13">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/core/sortTuplesByLength.js.html#lineNumber13">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import sortTuplesByLength from &apos;<span><a href="file/src/array/sortTuplesByLength.js.html#lineNumber13">@aureooms/js-radix-sort/src/array/sortTuplesByLength.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import sortTuplesByLength from &apos;<span><a href="file/src/array/core/sortTuplesByLength.js.html#lineNumber13">@aureooms/js-radix-sort/src/array/core/sortTuplesByLength.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>O(M + N) time where M is the maximum length of a tuple, and
@@ -1957,6 +2186,77 @@ N is the number of tuples.</p>
   
 </div>
 <div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-function-sortUint32">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">sortUint32</span><span class="code" data-ice="signature">(array: <span>*</span>): <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/array/api/sortUint32.js.html#lineNumber3">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import sortUint32 from &apos;<span><a href="file/src/array/api/sortUint32.js.html#lineNumber3">@aureooms/js-radix-sort/src/array/api/sortUint32.js</a></span>&apos;</code></pre></div>
+  
+  
+  
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">array</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="static-function-stable">
     <span class="access" data-ice="access">public</span>
     
@@ -1968,11 +2268,11 @@ N is the number of tuples.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/stable.js.html#lineNumber15">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/core/stable.js.html#lineNumber15">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import stable from &apos;<span><a href="file/src/array/stable.js.html#lineNumber15">@aureooms/js-radix-sort/src/array/stable.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import stable from &apos;<span><a href="file/src/array/core/stable.js.html#lineNumber15">@aureooms/js-radix-sort/src/array/core/stable.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>O(kM + kN) time where k is the number of arrays, M is the radix, and
@@ -2053,11 +2353,11 @@ N is the length of each array. The product kN corresponds to the input size.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/array/zeros.js.html#lineNumber1">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/array/core/zeros.js.html#lineNumber1">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import zeros from &apos;<span><a href="file/src/array/zeros.js.html#lineNumber1">@aureooms/js-radix-sort/src/array/zeros.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import zeros from &apos;<span><a href="file/src/array/core/zeros.js.html#lineNumber1">@aureooms/js-radix-sort/src/array/core/zeros.js</a></span>&apos;</code></pre></div>
   
   
   

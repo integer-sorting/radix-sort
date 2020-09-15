@@ -1,121 +1,144 @@
 {
-  "coverage": "36.84%",
-  "expectCount": 19,
+  "coverage": "29.16%",
+  "expectCount": 24,
   "actualCount": 7,
   "files": {
-    "src/array/accumulate.js": {
-      "expectCount": 1,
-      "actualCount": 1,
-      "undocumentLines": []
-    },
-    "src/array/alloc.js": {
+    "src/array/api/sort.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
-        1
+        5
       ]
     },
-    "src/array/compose.js": {
-      "expectCount": 1,
+    "src/array/api/sortFloat32.js": {
+      "expectCount": 3,
       "actualCount": 0,
       "undocumentLines": [
-        3
+        5,
+        10,
+        15
       ]
     },
-    "src/array/cumulativeHistogram.js": {
-      "expectCount": 1,
-      "actualCount": 1,
-      "undocumentLines": []
-    },
-    "src/array/digits.js": {
-      "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        4
-      ]
-    },
-    "src/array/fill.js": {
-      "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        1
-      ]
-    },
-    "src/array/histogram.js": {
-      "expectCount": 1,
-      "actualCount": 1,
-      "undocumentLines": []
-    },
-    "src/array/load.js": {
+    "src/array/api/sortInt32.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
         3
       ]
     },
-    "src/array/loadLengths.js": {
-      "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        1
-      ]
-    },
-    "src/array/permute.js": {
+    "src/array/api/sortUint32.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
         3
       ]
     },
-    "src/array/permuteInPlace.js": {
-      "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        3
-      ]
-    },
-    "src/array/rank.js": {
+    "src/array/core/accumulate.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []
     },
-    "src/array/reset.js": {
+    "src/array/core/alloc.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
         2
       ]
     },
-    "src/array/sort.js": {
+    "src/array/core/compose.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    },
+    "src/array/core/cumulativeHistogram.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/array/core/digits.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        4
+      ]
+    },
+    "src/array/core/fill.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "src/array/core/histogram.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/array/core/load.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    },
+    "src/array/core/loadLengths.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "src/array/core/permute.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    },
+    "src/array/core/permuteInPlace.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    },
+    "src/array/core/rank.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/array/core/reset.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        2
+      ]
+    },
+    "src/array/core/sortArbitraryTuples.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
         5
       ]
     },
-    "src/array/sortArbitraryTuples.js": {
-      "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        5
-      ]
-    },
-    "src/array/sortFixedLengthTuples.js": {
+    "src/array/core/sortFixedLengthTuples.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []
     },
-    "src/array/sortTuplesByLength.js": {
+    "src/array/core/sortTuplesByLength.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []
     },
-    "src/array/stable.js": {
+    "src/array/core/stable.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []
     },
-    "src/array/zeros.js": {
+    "src/array/core/zeros.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
