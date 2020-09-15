@@ -1,6 +1,4 @@
-
-export function _stable ( split ) {
-
+export function _stable(split) {
 	/**
 	 * In-place implementation of radix sort. NOT STABLE.
 	 *
@@ -21,23 +19,23 @@ export function _stable ( split ) {
 	 * sorting algorithm.
 	 */
 
-	let stable = function ( lsb , a , ai , aj , b , bi , bj , c , ci , cj , si , sj ) {
+	const stable = function (lsb, a, ai, aj, b, bi, bj, c, ci, cj, si, sj) {
+		if (si >= sj) {
+			return;
+		}
 
-		if ( si >= sj ) return ;
+		split((x) => lsb(x, si), a, ai, aj, b, bi, bj, c, ci);
 
-		split( x => lsb( x , si ) , a , ai , aj , b , bi , bj , c , ci ) ;
+		// Reset the counting buffer
 
-		// reset the counting buffer
+		for (let bk = bi; bk < bj; ++bk) {
+			b[bk] = 0;
+		}
 
-		for ( let bk = bi ; bk < bj ; ++bk ) b[bk] = 0 ;
+		// Sort according to remaining symbols
 
-		// sort according to remaining symbols
+		stable(lsb, c, ci, cj, b, bi, bj, a, ai, aj, si + 1, sj);
+	};
 
-		stable( lsb , c , ci , cj , b , bi , bj , a , ai , aj , si + 1 , sj ) ;
-
-	} ;
-
-	return stable ;
-
+	return stable;
 }
-

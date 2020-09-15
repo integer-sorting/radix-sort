@@ -1,6 +1,4 @@
-
-export function _inplace ( split ) {
-
+export function _inplace(split) {
 	/**
 	 * In-place implementation of radix sort. NOT STABLE.
 	 *
@@ -15,20 +13,18 @@ export function _inplace ( split ) {
 	 * sorting algorithm.
 	 */
 
-	let inplace = function ( msb , a , ai , aj , si , sj ) {
+	const inplace = function (msb, a, ai, aj, si, sj) {
+		if (si >= sj) {
+			return;
+		}
 
-		if ( si >= sj ) return ;
+		const pivot = split((x) => msb(x, si), a, ai, aj);
 
-		let pivot = split( x => msb( x , si ) , a , ai , aj ) ;
+		// Sort according to remaining symbols
 
-		// sort according to remaining symbols
+		inplace(msb, a, ai, pivot, si + 1, sj);
+		inplace(msb, a, pivot + 1, aj, si + 1, sj);
+	};
 
-		inplace( msb , a , ai , pivot , si + 1 , sj ) ;
-		inplace( msb , a , pivot + 1 , aj , si + 1 , sj ) ;
-
-	} ;
-
-	return inplace ;
-
+	return inplace;
 }
-

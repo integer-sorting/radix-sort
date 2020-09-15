@@ -1,5 +1,3 @@
-
-
 /**
  * In-place, stable implementation of radix-sort for singly linked lists.
  *
@@ -15,39 +13,33 @@
  *
  */
 
-export function nodes ( lsb , head , hi , lo , si , sj ) {
-
-	if ( si >= sj ) return head ;
-
-	let _lo = lo , _hi = hi ;
-
-	while ( head !== null ) {
-
-		if ( lsb ( head.value , si ) === 0 ) _lo = _lo.next = head ;
-
-		else _hi = _hi.next = head ;
-
-		head = head.next ;
-
+export function nodes(lsb, head, hi, lo, si, sj) {
+	if (si >= sj) {
+		return head;
 	}
 
-	if ( lo.next === null ) {
+	let _lo = lo;
+	let _hi = hi;
 
-		head = hi.next ;
-		hi.next = null ;
+	while (head !== null) {
+		if (lsb(head.value, si) === 0) {
+			_lo = _lo.next = head;
+		} else {
+			_hi = _hi.next = head;
+		}
 
+		head = head.next;
 	}
 
-	else {
-
-		_lo.next = hi.next ;
-		head = lo.next ;
-		lo.next = null ;
-		hi.next = null ;
-
+	if (lo.next === null) {
+		head = hi.next;
+		hi.next = null;
+	} else {
+		_lo.next = hi.next;
+		head = lo.next;
+		lo.next = null;
+		hi.next = null;
 	}
 
-	return nodes( lsb , head , hi , lo , si + 1 , sj ) ;
-
+	return nodes(lsb, head, hi, lo, si + 1, sj);
 }
-

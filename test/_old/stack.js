@@ -1,5 +1,3 @@
-
-
 /**
  * In-place, stable implementation of radix-sort for a stack.
  *
@@ -15,25 +13,28 @@
  *
  */
 
-export function stack ( lsb , main , hi , lo , si , sj ) {
-
-	if ( si >= sj ) return ;
-
-	while ( !main.empty( ) ) {
-
-		let key = main.pop( ) ;
-
-		if ( lsb ( key , si ) === 0 ) lo.push( key ) ;
-
-		else hi.push( key ) ;
-
+export function stack(lsb, main, hi, lo, si, sj) {
+	if (si >= sj) {
+		return;
 	}
 
-	while ( !hi.empty( ) ) main.push( hi.pop( ) ) ;
+	while (!main.empty()) {
+		const key = main.pop();
 
-	while ( !lo.empty( ) ) main.push( lo.pop( ) ) ;
+		if (lsb(key, si) === 0) {
+			lo.push(key);
+		} else {
+			hi.push(key);
+		}
+	}
 
-	stack( lsb , main , hi , lo , si + 1 , sj ) ;
+	while (!hi.empty()) {
+		main.push(hi.pop());
+	}
 
+	while (!lo.empty()) {
+		main.push(lo.pop());
+	}
+
+	stack(lsb, main, hi, lo, si + 1, sj);
 }
-
