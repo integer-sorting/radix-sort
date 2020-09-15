@@ -7,7 +7,7 @@ import {
 	increasing
 } from '@aureooms/js-compare';
 
-import sort from '../../src/array/sort';
+import sort from '../../../src/array/api/sort';
 
 const limbs = (t, k, M, data) => {
 	const result = sort(k, M, data.slice());

@@ -17,7 +17,7 @@ const stable = (M, current, rest) => {
 	assert(current !== undefined);
 	const N = current.length;
 	const permutation1 = alloc(N);
-	_identity(permutation1, N);
+	_identity(permutation1, N); // TODO Not needed if rest is empty (k=1)
 	const ch = zeros(M + 1); // O(M)
 	// eslint-disable-next-line no-constant-condition
 	while (true) {

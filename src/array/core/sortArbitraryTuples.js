@@ -11,7 +11,7 @@ const sortArbitraryTuples = (M, tuples, output) => {
 	for (let g = 1; g < groups; ++g) {
 		const i = ch[g - 1];
 		const j = ch[g];
-		sortFixedLengthTuples(g, M, output, tuples, i, j);
+		sortFixedLengthTuples(g, M, output, tuples, i, j); // TODO this modifies the input array
 	}
 
 	return tuples;

@@ -32,6 +32,11 @@
   resolved "https://registry.yarnpkg.com/@aureooms/js-permutation/-/js-permutation-2.0.0.tgz#48f4a1bfdc73d8759e79ba376bf2ca1d8b1ea132"
   integrity sha1-SPShv9xz2HWeebo3a/LKHYseoTI=
 
+"@aureooms/js-random@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@aureooms/js-random/-/js-random-2.0.0.tgz#f62c6954ed79bd9a520197125ee3cfbe14b00d72"
+  integrity sha1-9ixpVO15vZpSAZcSXuPPvhSwDXI=
+
 "@babel/cli@7.11.6":
   version "7.11.6"
   resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.11.6.tgz#1fcbe61c2a6900c3539c06ee58901141f3558482"
