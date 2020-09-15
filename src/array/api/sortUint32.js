@@ -2,7 +2,7 @@ import sort from './sort';
 
 const sortUint32 = (array) => {
 	const k = 4; // TODO make it depend on array.length
-	const M = 256;
+	const M = 2 ** 8; // TODO another good option is k = 3 M = 2**11
 	// TODO avoid copying back and forth
 	const tuples = Array.prototype.map.call(array, (x) => [
 		(x & 0xff000000) >>> 24,
