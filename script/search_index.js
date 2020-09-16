@@ -102,9 +102,21 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "@aureooms/js-radix-sort/src/array/api/sortint16.js~sortint16",
+    "function/index.html#static-function-sortInt16",
+    "<span>sortInt16</span> <span class=\"search-result-import-path\">@aureooms/js-radix-sort/src/array/api/sortInt16.js</span>",
+    "function"
+  ],
+  [
     "@aureooms/js-radix-sort/src/array/api/sortint32.js~sortint32",
     "function/index.html#static-function-sortInt32",
     "<span>sortInt32</span> <span class=\"search-result-import-path\">@aureooms/js-radix-sort/src/array/api/sortInt32.js</span>",
+    "function"
+  ],
+  [
+    "@aureooms/js-radix-sort/src/array/api/sortint8.js~sortint8",
+    "function/index.html#static-function-sortInt8",
+    "<span>sortInt8</span> <span class=\"search-result-import-path\">@aureooms/js-radix-sort/src/array/api/sortInt8.js</span>",
     "function"
   ],
   [
@@ -114,9 +126,21 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "@aureooms/js-radix-sort/src/array/api/sortuint16.js~sortuint16",
+    "function/index.html#static-function-sortUint16",
+    "<span>sortUint16</span> <span class=\"search-result-import-path\">@aureooms/js-radix-sort/src/array/api/sortUint16.js</span>",
+    "function"
+  ],
+  [
     "@aureooms/js-radix-sort/src/array/api/sortuint32.js~sortuint32",
     "function/index.html#static-function-sortUint32",
     "<span>sortUint32</span> <span class=\"search-result-import-path\">@aureooms/js-radix-sort/src/array/api/sortUint32.js</span>",
+    "function"
+  ],
+  [
+    "@aureooms/js-radix-sort/src/array/api/sortuint8.js~sortuint8",
+    "function/index.html#static-function-sortUint8",
+    "<span>sortUint8</span> <span class=\"search-result-import-path\">@aureooms/js-radix-sort/src/array/api/sortUint8.js</span>",
     "function"
   ],
   [
@@ -426,15 +450,39 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "src/array/api/sortint16.js",
+    "file/src/array/api/sortInt16.js.html",
+    "src/array/api/sortInt16.js",
+    "file"
+  ],
+  [
     "src/array/api/sortint32.js",
     "file/src/array/api/sortInt32.js.html",
     "src/array/api/sortInt32.js",
     "file"
   ],
   [
+    "src/array/api/sortint8.js",
+    "file/src/array/api/sortInt8.js.html",
+    "src/array/api/sortInt8.js",
+    "file"
+  ],
+  [
+    "src/array/api/sortuint16.js",
+    "file/src/array/api/sortUint16.js.html",
+    "src/array/api/sortUint16.js",
+    "file"
+  ],
+  [
     "src/array/api/sortuint32.js",
     "file/src/array/api/sortUint32.js.html",
     "src/array/api/sortUint32.js",
+    "file"
+  ],
+  [
+    "src/array/api/sortuint8.js",
+    "file/src/array/api/sortUint8.js.html",
+    "src/array/api/sortUint8.js",
     "file"
   ],
   [

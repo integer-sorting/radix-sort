@@ -1,6 +1,6 @@
 {
-  "coverage": "29.16%",
-  "expectCount": 24,
+  "coverage": "25%",
+  "expectCount": 28,
   "actualCount": 7,
   "files": {
     "src/array/api/sort.js": {
@@ -19,6 +19,13 @@
         15
       ]
     },
+    "src/array/api/sortInt16.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    },
     "src/array/api/sortInt32.js": {
       "expectCount": 1,
       "actualCount": 0,
@@ -26,7 +33,28 @@
         3
       ]
     },
+    "src/array/api/sortInt8.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    },
+    "src/array/api/sortUint16.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    },
     "src/array/api/sortUint32.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    },
+    "src/array/api/sortUint8.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [

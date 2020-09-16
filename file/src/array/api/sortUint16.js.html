@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../../../">
-  <title data-ice="title">src/array/core/permute.js | @aureooms/js-radix-sort</title>
+  <title data-ice="title">src/array/api/sortUint16.js | @aureooms/js-radix-sort</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -59,26 +59,22 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/array/core/permute.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import assert from &apos;assert&apos;;
+<div class="content" data-ice="content"><h1 data-ice="title">src/array/api/sortUint16.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import sort from &apos;./sort&apos;;
 
-const permute = (permutation, array, ai, aj, output, oi) =&gt; {
-	console.debug(&apos;permute&apos;, permutation, array, ai, aj, output, oi);
-	assert(Number.isInteger(ai));
-	assert(Number.isInteger(aj));
-	assert(Number.isInteger(oi));
-	const N = aj - ai; // Only used in assert
-	const oj = oi + N; // Only used in assert
-	assert(ai &gt;= 0 &amp;&amp; aj &lt;= array.length);
-	assert(permutation.length &gt;= N);
-	assert(oi &gt;= 0 &amp;&amp; oj &lt;= output.length);
-	for (let i = 0; i &lt; N; ++i) {
-		assert(permutation[i] &gt;= 0 &amp;&amp; permutation[i] &lt; N);
-		output[oi + permutation[i]] = array[ai + i];
-	}
+const sortUint16 = (array) =&gt; {
+	const k = 2; // TODO make it depend on array.length
+	const M = 2 ** 8;
+	// TODO avoid copying back and forth
+	const tuples = Array.prototype.map.call(array, (x) =&gt; [
+		(x &amp; 0xff00) &gt;&gt;&gt; 8,
+		(x &amp; 0xff) &gt;&gt;&gt; 0
+	]);
+	const output = sort(k, M, tuples);
+	return Array.prototype.map.call(output, ([c, d]) =&gt; ((c &lt;&lt; 8) | d) &gt;&gt;&gt; 0);
 };
 
-export default permute;
+export default sortUint16;
 </code></pre>
 
 </div>
