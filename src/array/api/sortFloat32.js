@@ -13,7 +13,9 @@ const iFloatFlip = (f) => {
 };
 
 const sortFloat32 = (array) => {
-	const buffer = Float32Array.from(array).buffer; // TODO avoid copying when passed a Float32Array
+	// TODO avoid copying when passed a Float32Array
+	// but be careful to take into account byteOffset, byteLength, and length
+	const buffer = Float32Array.from(array).buffer;
 	const view = new Uint32Array(buffer);
 	const N = array.length;
 	for (let i = 0; i < N; ++i) view[i] = floatFlip(view[i]);
