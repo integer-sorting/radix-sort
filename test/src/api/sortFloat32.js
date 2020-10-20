@@ -29,7 +29,7 @@ test(macro, []);
 test(macro, [1.25, -2.5, -3.125, 4.375]);
 
 const N = 1 << 17;
-const longShuffledInput = list(range((-N / 2) | 0, (N / 2) | 0));
+const longShuffledInput = list(range(Math.trunc(-N / 2), Math.trunc(N / 2)));
 shuffle(longShuffledInput, 0, N);
 test(macro, longShuffledInput);
 

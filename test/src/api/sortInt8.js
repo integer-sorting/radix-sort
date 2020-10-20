@@ -23,7 +23,7 @@ test(macro, [1, -2, -3, 4]);
 
 const N = 1 << 17;
 const longShuffledInput = list(
-	Int8Array.from(range((-N / 2) | 0, (N / 2) | 0))
+	Int8Array.from(range(Math.trunc(-N / 2), Math.trunc(N / 2)))
 );
 shuffle(longShuffledInput, 0, N);
 test(macro, longShuffledInput);
