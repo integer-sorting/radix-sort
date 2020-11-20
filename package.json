@@ -138,11 +138,6 @@
   "sideEffects": false,
   "xo": {
     "prettier": true,
-    "ignore": [
-      "lib",
-      "doc",
-      "test/_old"
-    ],
     "rules": {
       "unicorn/filename-case": [
         "error",
@@ -150,6 +145,11 @@
           "case": "camelCase"
         }
       ]
-    }
+    },
+    "ignores": [
+      "lib",
+      "doc",
+      "test/_old"
+    ]
   }
 }
