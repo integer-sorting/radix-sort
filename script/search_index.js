@@ -438,6 +438,12 @@ window.esdocSearchIndex = [
     "external"
   ],
   [
+    "src/array/api/index.js",
+    "file/src/array/api/index.js.html",
+    "src/array/api/index.js",
+    "file"
+  ],
+  [
     "src/array/api/sort.js",
     "file/src/array/api/sort.js.html",
     "src/array/api/sort.js",
