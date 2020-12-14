@@ -8,7 +8,7 @@
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<link rel="stylesheet" href="./inject/css/0-style.css"><script src="./inject/script/0-header.js"></script><meta name="description" content="Radix sorting algorithms for JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@aureooms/js-radix-sort"><meta property="twitter:description" content="Radix sorting algorithms for JavaScript"></head>
+<script src="./inject/script/0-header.js"></script><link rel="stylesheet" href="./inject/css/0-style.css"><meta name="description" content="Radix sorting algorithms for JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@aureooms/js-radix-sort"><meta property="twitter:description" content="Radix sorting algorithms for JavaScript"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -75,7 +75,9 @@ const iFloatFlip = (f) =&gt; {
 };
 
 const sortFloat32 = (array) =&gt; {
-	const buffer = Float32Array.from(array).buffer; // TODO avoid copying when passed a Float32Array
+	// TODO avoid copying when passed a Float32Array
+	// but be careful to take into account byteOffset, byteLength, and length
+	const buffer = Float32Array.from(array).buffer;
 	const view = new Uint32Array(buffer);
 	const N = array.length;
 	for (let i = 0; i &lt; N; ++i) view[i] = floatFlip(view[i]);
