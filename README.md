@@ -1,4 +1,4 @@
-:oden: [@aureooms/js-radix-sort](https://aureooms.github.io/js-radix-sort)
+:oden: [@aureooms/js-radix-sort](https://make-github-pseudonymous-again.github.io/js-radix-sort)
 ==
 
 Radix sorting algorithms for JavaScript.
@@ -16,5 +16,5 @@ Parent is [@aureooms/js-sort](https://github.com/aureooms/js-sort).
 [![Code maintainability](https://img.shields.io/codeclimate/maintainability/aureooms/js-radix-sort.svg)](https://codeclimate.com/github/aureooms/js-radix-sort/trends/churn)
 [![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-radix-sort/main.svg)](https://codecov.io/gh/aureooms/js-radix-sort)
 [![Code technical debt](https://img.shields.io/codeclimate/tech-debt/aureooms/js-radix-sort.svg)](https://codeclimate.com/github/aureooms/js-radix-sort/trends/technical_debt)
-[![Documentation](https://aureooms.github.io/js-radix-sort//badge.svg)](https://aureooms.github.io/js-radix-sort//source.html)
+[![Documentation](https://make-github-pseudonymous-again.github.io/js-radix-sort//badge.svg)](https://make-github-pseudonymous-again.github.io/js-radix-sort//source.html)
 [![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-radix-sort)](https://bundlephobia.com/result?p=@aureooms/js-radix-sort)
