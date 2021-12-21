@@ -30,6 +30,6 @@ shuffle(longShuffledInput, 0, N);
 test(macro, longShuffledInput);
 
 const longRandomInput = list(
-	map(() => randrange(-(2 ** 31), 2 ** 31), range(N))
+	map(() => randrange(-(2 ** 31), 2 ** 31), range(N)),
 );
 test(macro, longRandomInput);

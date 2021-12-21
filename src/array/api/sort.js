@@ -15,6 +15,7 @@ const sort = (k, M, tuples) => {
 		return tuples;
 	}
 
+	// eslint-disable-next-line unicorn/no-new-array
 	const output = new Array(N);
 	if (k >= 1) {
 		return sortFixedLengthTuples(k, M, tuples, output, 0, N);

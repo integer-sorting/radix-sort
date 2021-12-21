@@ -1,5 +1,5 @@
-import test from 'ava';
 import {AssertionError} from 'assert';
+import test from 'ava';
 import {list} from '@iterable-iterator/list';
 import {all} from '@iterable-iterator/reduce';
 import {map} from '@iterable-iterator/map';
@@ -48,7 +48,7 @@ test(throws, 2, 2, [[1], [0]]);
 test(throws, 3, 3, [
 	[2, 1, 3],
 	[3, 2, 1],
-	[1, 2, 3]
+	[1, 2, 3],
 ]);
 
 // Degenerates to counting sort
@@ -59,14 +59,14 @@ test(singletons, 3, [0, 2, 1]);
 test(limbs, 3, 3, [
 	[2, 1, 0],
 	[0, 2, 1],
-	[1, 2, 0]
+	[1, 2, 0],
 ]);
 
 // Custom radix
 test(limbs, 3, 4, [
 	[2, 1, 3],
 	[3, 2, 1],
-	[1, 2, 3]
+	[1, 2, 3],
 ]);
 
 test('Wikipedia example', limbs, 3, 10, [
@@ -77,7 +77,7 @@ test('Wikipedia example', limbs, 3, 10, [
 	[0, 0, 2],
 	[0, 2, 4],
 	[8, 0, 2],
-	[0, 6, 6]
+	[0, 6, 6],
 ]);
 
 // Variable tuple length
@@ -89,5 +89,5 @@ test(limbs, -1, 10, [
 	[2],
 	[8, 0, 2],
 	[2],
-	[6, 6]
+	[6, 6],
 ]);

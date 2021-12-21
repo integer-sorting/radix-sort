@@ -3,12 +3,12 @@ import sortUint32 from './sortUint32.js';
 // http://www.codercorner.com/RadixSortRevisited.htm
 // http://stereopsis.com/radix.html
 const floatFlip = (f) => {
-	const mask = -(f >>> 31) | 0x80000000;
+	const mask = -(f >>> 31) | 0x80_00_00_00;
 	return f ^ mask;
 };
 
 const iFloatFlip = (f) => {
-	const mask = ((f >>> 31) - 1) | 0x80000000;
+	const mask = ((f >>> 31) - 1) | 0x80_00_00_00;
 	return f ^ mask;
 };
 

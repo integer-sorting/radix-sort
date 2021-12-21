@@ -23,9 +23,11 @@ export function nodes(lsb, head, hi, lo, si, sj) {
 
 	while (head !== null) {
 		if (lsb(head.value, si) === 0) {
-			_lo = _lo.next = head;
+			_lo.next = head;
+			_lo = head;
 		} else {
-			_hi = _hi.next = head;
+			_hi.next = head;
+			_hi = head;
 		}
 
 		head = head.next;

@@ -25,7 +25,7 @@ const isStable = (t, k, M, data) => {
 const repr = (data) =>
 	data.length >= 20
 		? `[${JSON.stringify(data.slice(0, 9)).slice(1, -1)},..,${JSON.stringify(
-				data.slice(-9)
+				data.slice(-9),
 		  ).slice(1, -1)}]`
 		: JSON.stringify(data);
 
@@ -38,11 +38,11 @@ test(
 	isStable,
 	1,
 	1,
-	list(map(([a, b]) => [b, a], enumerate(nrepeat(0, 1000))))
+	list(map(([a, b]) => [b, a], enumerate(nrepeat(0, 1000)))),
 );
 test(
 	isStable,
 	2,
 	2,
-	list(map((i) => [randint(0, 2), randint(0, 2), i], range(1000)))
+	list(map((i) => [randint(0, 2), randint(0, 2), i], range(1000))),
 );

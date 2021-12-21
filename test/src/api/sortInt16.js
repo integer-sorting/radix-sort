@@ -26,12 +26,12 @@ test(macro, [1, -2, -3, 4]);
 
 const N = 1 << 17;
 const longShuffledInput = list(
-	Int16Array.from(range(Math.trunc(-N / 2), Math.trunc(N / 2)))
+	Int16Array.from(range(Math.trunc(-N / 2), Math.trunc(N / 2))),
 );
 shuffle(longShuffledInput, 0, N);
 test(macro, longShuffledInput);
 
 const longRandomInput = list(
-	map(() => randrange(-(2 ** 15), 2 ** 15), range(N))
+	map(() => randrange(-(2 ** 15), 2 ** 15), range(N)),
 );
 test(macro, longRandomInput);

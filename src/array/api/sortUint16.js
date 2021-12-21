@@ -5,8 +5,8 @@ const sortUint16 = (array) => {
 	const M = 2 ** 8;
 	// TODO avoid copying back and forth
 	const tuples = Array.prototype.map.call(array, (x) => [
-		(x & 0xff00) >>> 8,
-		(x & 0xff) >>> 0
+		(x & 0xff_00) >>> 8,
+		(x & 0xff) >>> 0,
 	]);
 	const output = sort(k, M, tuples);
 	return Array.prototype.map.call(output, ([c, d]) => ((c << 8) | d) >>> 0);
