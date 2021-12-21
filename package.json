@@ -130,7 +130,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/integer-sorting/radix-sort.git"
+    "url": "https://github.com/integer-sorting/radix-sort"
   },
   "scripts": {
     "build": "babel --delete-dir-on-start --env-name production src -d lib",
