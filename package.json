@@ -2,7 +2,81 @@
   "name": "@integer-sorting/radix-sort",
   "description": "Radix sorting algorithms for JavaScript",
   "version": "2.0.1",
+  "license": "AGPL-3.0",
   "author": "make-github-pseudonymous-again",
+  "homepage": "https://integer-sorting.github.io/radix-sort",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/integer-sorting/radix-sort"
+  },
+  "bugs": {
+    "url": "https://github.com/integer-sorting/radix-sort/issues"
+  },
+  "keywords": [
+    "agpl",
+    "algorithms",
+    "javascript",
+    "linear-time",
+    "radix",
+    "radix-sort",
+    "radix-sort-algorithm",
+    "sorting",
+    "sorting-algorithms",
+    "word-ram",
+    "word-ram-model"
+  ],
+  "sideEffects": false,
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "babel --delete-dir-on-start --env-name production src -d lib",
+    "cover": "nyc --reporter=lcov npm test",
+    "dev": "npm run lint -- --fix && npm run cover -- -- -st --fail-fast",
+    "esdoc": "esdoc",
+    "lint": "xo",
+    "lint-config": "fixpack --dryRun",
+    "lint-config-and-fix": "fixpack || fixpack",
+    "prepare": "npm run build",
+    "release": "np",
+    "test": "ava",
+    "travis": "npm run lint && npm run cover"
+  },
+  "dependencies": {
+    "@combinatorics/permutation": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.16.0",
+    "@babel/core": "7.16.5",
+    "@babel/preset-env": "7.16.5",
+    "@babel/register": "7.16.5",
+    "@iterable-iterator/list": "^1.0.1",
+    "@iterable-iterator/map": "^1.0.1",
+    "@iterable-iterator/range": "^2.1.0",
+    "@iterable-iterator/reduce": "^1.0.1",
+    "@iterable-iterator/repeat": "^1.0.1",
+    "@iterable-iterator/sorted": "^1.0.0",
+    "@iterable-iterator/zip": "^1.0.1",
+    "@randomized/random": "^4.0.0",
+    "@total-order/lex": "^1.0.0",
+    "@total-order/primitive": "^1.0.1",
+    "ava": "^3.15.0",
+    "babel-plugin-transform-remove-console": "6.9.4",
+    "babel-plugin-unassert": "3.2.0",
+    "babel-preset-power-assert": "3.0.0",
+    "coveralls": "3.1.1",
+    "esdoc": "1.1.0",
+    "esdoc-inject-script-plugin": "1.0.0",
+    "esdoc-inject-style-plugin": "1.0.0",
+    "esdoc-standard-plugin": "1.0.0",
+    "fixpack": "4.0.0",
+    "np": "7.6.0",
+    "nyc": "15.1.0",
+    "power-assert": "1.6.1",
+    "regenerator-runtime": "0.13.9",
+    "xo": "0.36.1"
+  },
   "ava": {
     "files": [
       "test/src/**/*"
@@ -72,80 +146,6 @@
       }
     }
   },
-  "bugs": {
-    "url": "https://github.com/integer-sorting/radix-sort/issues"
-  },
-  "dependencies": {
-    "@combinatorics/permutation": "^4.0.0"
-  },
-  "devDependencies": {
-    "@babel/cli": "7.16.0",
-    "@babel/core": "7.16.5",
-    "@babel/preset-env": "7.16.5",
-    "@babel/register": "7.16.5",
-    "@iterable-iterator/list": "^1.0.1",
-    "@iterable-iterator/map": "^1.0.1",
-    "@iterable-iterator/range": "^2.1.0",
-    "@iterable-iterator/reduce": "^1.0.1",
-    "@iterable-iterator/repeat": "^1.0.1",
-    "@iterable-iterator/sorted": "^1.0.0",
-    "@iterable-iterator/zip": "^1.0.1",
-    "@randomized/random": "^4.0.0",
-    "@total-order/lex": "^1.0.0",
-    "@total-order/primitive": "^1.0.1",
-    "ava": "^3.15.0",
-    "babel-plugin-transform-remove-console": "6.9.4",
-    "babel-plugin-unassert": "3.2.0",
-    "babel-preset-power-assert": "3.0.0",
-    "coveralls": "3.1.1",
-    "esdoc": "1.1.0",
-    "esdoc-inject-script-plugin": "1.0.0",
-    "esdoc-inject-style-plugin": "1.0.0",
-    "esdoc-standard-plugin": "1.0.0",
-    "np": "7.6.0",
-    "nyc": "15.1.0",
-    "power-assert": "1.6.1",
-    "regenerator-runtime": "0.13.9",
-    "xo": "0.36.1",
-    "fixpack": "4.0.0"
-  },
-  "files": [
-    "lib"
-  ],
-  "homepage": "https://integer-sorting.github.io/radix-sort",
-  "keywords": [
-    "agpl",
-    "algorithms",
-    "javascript",
-    "linear-time",
-    "radix",
-    "radix-sort",
-    "radix-sort-algorithm",
-    "sorting",
-    "sorting-algorithms",
-    "word-ram",
-    "word-ram-model"
-  ],
-  "license": "AGPL-3.0",
-  "main": "lib/index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/integer-sorting/radix-sort"
-  },
-  "scripts": {
-    "build": "babel --delete-dir-on-start --env-name production src -d lib",
-    "cover": "nyc --reporter=lcov npm test",
-    "dev": "npm run lint -- --fix && npm run cover -- -- -st --fail-fast",
-    "esdoc": "esdoc",
-    "lint": "xo",
-    "prepare": "npm run build",
-    "release": "np",
-    "test": "ava",
-    "travis": "npm run lint && npm run cover",
-    "lint-config-and-fix": "fixpack || fixpack",
-    "lint-config": "fixpack --dryRun"
-  },
-  "sideEffects": false,
   "xo": {
     "prettier": true,
     "rules": {
