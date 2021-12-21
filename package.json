@@ -1,8 +1,8 @@
 {
-  "name": "@aureooms/js-radix-sort",
+  "name": "@integer-sorting/radix-sort",
   "description": "Radix sorting algorithms for JavaScript",
   "version": "2.0.1",
-  "author": "aureooms",
+  "author": "make-github-pseudonymous-again",
   "ava": {
     "files": [
       "test/src/**/*"
@@ -73,7 +73,7 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/make-github-pseudonymous-again/js-radix-sort/issues"
+    "url": "https://github.com/integer-sorting/radix-sort/issues"
   },
   "dependencies": {
     "@combinatorics/permutation": "^4.0.0"
@@ -111,7 +111,7 @@
   "files": [
     "lib"
   ],
-  "homepage": "http://make-github-pseudonymous-again.github.io/js-radix-sort/",
+  "homepage": "http://integer-sorting.github.io/radix-sort",
   "keywords": [
     "agpl",
     "algorithms",
@@ -129,7 +129,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/make-github-pseudonymous-again/js-radix-sort.git"
+    "url": "https://github.com/integer-sorting/radix-sort.git"
   },
   "scripts": {
     "build": "babel --delete-dir-on-start --env-name production src -d lib",
