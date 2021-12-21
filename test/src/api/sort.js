@@ -1,11 +1,11 @@
 import test from 'ava';
 import {AssertionError} from 'assert';
-import {list, all, map, sorted} from '@aureooms/js-itertools';
-import {
-	fixedlexicographical,
-	quasilexicographical,
-	increasing
-} from '@aureooms/js-compare';
+import {list} from '@iterable-iterator/list';
+import {all} from '@iterable-iterator/reduce';
+import {map} from '@iterable-iterator/map';
+import {sorted} from '@iterable-iterator/sorted';
+import {fixedlexicographical, quasilexicographical} from '@total-order/lex';
+import {increasing} from '@total-order/primitive';
 
 import sort from '../../../src/array/api/sort';
 

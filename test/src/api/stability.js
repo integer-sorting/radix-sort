@@ -1,15 +1,15 @@
 import test from 'ava';
-import {
-	list,
-	all,
-	map,
-	sorted,
-	range,
-	enumerate,
-	nrepeat
-} from '@aureooms/js-itertools';
-import {quasilexicographical, increasing} from '@aureooms/js-compare';
-import {randint} from '@aureooms/js-random';
+
+import {list} from '@iterable-iterator/list';
+import {all} from '@iterable-iterator/reduce';
+import {map} from '@iterable-iterator/map';
+import {sorted} from '@iterable-iterator/sorted';
+import {range} from '@iterable-iterator/range';
+import {enumerate} from '@iterable-iterator/zip';
+import {nrepeat} from '@iterable-iterator/repeat';
+import {randint} from '@randomized/random';
+import {quasilexicographical} from '@total-order/lex';
+import {increasing} from '@total-order/primitive';
 
 import sort from '../../../src/array/api/sort';
 

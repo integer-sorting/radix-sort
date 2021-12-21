@@ -1,7 +1,10 @@
 import test from 'ava';
-import {sorted, range, list, map} from '@aureooms/js-itertools';
-import {shuffle, randrange} from '@aureooms/js-random';
-import {increasing} from '@aureooms/js-compare';
+import {sorted} from '@iterable-iterator/sorted';
+import {range} from '@iterable-iterator/range';
+import {list} from '@iterable-iterator/list';
+import {map} from '@iterable-iterator/map';
+import {shuffle, randrange} from '@randomized/random';
+import {increasing} from '@total-order/primitive';
 
 import sortUint32 from '../../../src/array/api/sortUint32';
 

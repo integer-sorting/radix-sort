@@ -1,5 +1,5 @@
 import assert from 'assert';
-import {_identity} from '@aureooms/js-permutation';
+import {_identity} from '@combinatorics/permutation';
 import alloc from './alloc';
 import zeros from './zeros';
 import reset from './reset';
