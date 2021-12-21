@@ -1,4 +1,4 @@
-import sortUint16 from './sortUint16';
+import sortUint16 from './sortUint16.js';
 
 const sortInt16 = (array) => {
 	const shift = -(2 ** 15);

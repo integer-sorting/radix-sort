@@ -5,7 +5,7 @@ import {list} from '@iterable-iterator/list';
 import {shuffle} from '@randomized/random';
 import {increasing} from '@total-order/primitive';
 
-import sortFloat32 from '../../../src/array/api/sortFloat32';
+import sortFloat32 from '../../../src/array/api/sortFloat32.js';
 
 const randomFloat32 = () => {
 	const sign = Math.random() < 0.5 ? 1 : -1;

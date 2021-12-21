@@ -1,4 +1,4 @@
-import sort from './sort';
+import sort from './sort.js';
 
 const sortUint32 = (array) => {
 	const k = 4; // TODO make it depend on array.length

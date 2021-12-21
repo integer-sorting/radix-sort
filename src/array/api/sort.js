@@ -1,6 +1,6 @@
 import assert from 'assert';
-import sortFixedLengthTuples from '../core/sortFixedLengthTuples';
-import sortArbitraryTuples from '../core/sortArbitraryTuples';
+import sortFixedLengthTuples from '../core/sortFixedLengthTuples.js';
+import sortArbitraryTuples from '../core/sortArbitraryTuples.js';
 
 const sort = (k, M, tuples) => {
 	assert(Number.isInteger(k));

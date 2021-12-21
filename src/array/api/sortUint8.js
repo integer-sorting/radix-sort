@@ -1,4 +1,4 @@
-import sort from './sort';
+import sort from './sort.js';
 
 const sortUint8 = (array) => {
 	const k = 1; // TODO make it depend on array.length ?

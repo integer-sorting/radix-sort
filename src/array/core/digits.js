@@ -1,5 +1,5 @@
-import alloc from './alloc';
-import load from './load';
+import alloc from './alloc.js';
+import load from './load.js';
 
 export default function* digits(tuples, i, j, s, t) {
 	const buffer = alloc(j - i);

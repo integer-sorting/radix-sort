@@ -7,7 +7,7 @@ import {sorted} from '@iterable-iterator/sorted';
 import {fixedlexicographical, quasilexicographical} from '@total-order/lex';
 import {increasing} from '@total-order/primitive';
 
-import sort from '../../../src/array/api/sort';
+import sort from '../../../src/array/api/sort.js';
 
 const limbs = (t, k, M, data) => {
 	const result = sort(k, M, data.slice());

@@ -11,7 +11,7 @@ import {randint} from '@randomized/random';
 import {quasilexicographical} from '@total-order/lex';
 import {increasing} from '@total-order/primitive';
 
-import sort from '../../../src/array/api/sort';
+import sort from '../../../src/array/api/sort.js';
 
 const isStable = (t, k, M, data) => {
 	t.true(k >= 0);

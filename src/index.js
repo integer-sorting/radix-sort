@@ -7,7 +7,7 @@ import {
 	sortUint16,
 	sortUint32,
 	sortUint8
-} from './array/api';
+} from './array/api/index.js';
 
 /* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 export default {

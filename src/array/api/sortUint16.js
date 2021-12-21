@@ -1,4 +1,4 @@
-import sort from './sort';
+import sort from './sort.js';
 
 const sortUint16 = (array) => {
 	const k = 2; // TODO make it depend on array.length

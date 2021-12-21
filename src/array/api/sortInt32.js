@@ -1,4 +1,4 @@
-import sortUint32 from './sortUint32';
+import sortUint32 from './sortUint32.js';
 
 const sortInt32 = (array) => {
 	const shift = -(2 ** 31);

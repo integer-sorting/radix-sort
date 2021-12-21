@@ -6,7 +6,7 @@ import {map} from '@iterable-iterator/map';
 import {shuffle, randrange} from '@randomized/random';
 import {increasing} from '@total-order/primitive';
 
-import sortUint16 from '../../../src/array/api/sortUint16';
+import sortUint16 from '../../../src/array/api/sortUint16.js';
 
 const macro = (t, data) => {
 	const result = sortUint16(data.slice());

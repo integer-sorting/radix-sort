@@ -6,7 +6,7 @@ import {map} from '@iterable-iterator/map';
 import {shuffle, randrange} from '@randomized/random';
 import {increasing} from '@total-order/primitive';
 
-import sortInt32 from '../../../src/array/api/sortInt32';
+import sortInt32 from '../../../src/array/api/sortInt32.js';
 
 const macro = (t, data) => {
 	const result = sortInt32(data.slice());

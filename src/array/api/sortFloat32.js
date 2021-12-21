@@ -1,4 +1,4 @@
-import sortUint32 from './sortUint32';
+import sortUint32 from './sortUint32.js';
 
 // http://www.codercorner.com/RadixSortRevisited.htm
 // http://stereopsis.com/radix.html

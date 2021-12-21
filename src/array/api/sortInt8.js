@@ -1,4 +1,4 @@
-import sortUint8 from './sortUint8';
+import sortUint8 from './sortUint8.js';
 
 const sortInt8 = (array) => {
 	const shift = -(2 ** 7);
