@@ -112,7 +112,7 @@
   "files": [
     "lib"
   ],
-  "homepage": "http://integer-sorting.github.io/radix-sort",
+  "homepage": "https://integer-sorting.github.io/radix-sort",
   "keywords": [
     "agpl",
     "algorithms",
