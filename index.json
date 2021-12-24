@@ -566,27 +566,16 @@
   {
     "__docId__": 48,
     "kind": "file",
-    "name": "src/array/api/index.js",
-    "content": "import sort from './sort';\nimport sortFloat32 from './sortFloat32';\nimport sortInt16 from './sortInt16';\nimport sortInt32 from './sortInt32';\nimport sortInt8 from './sortInt8';\nimport sortUint16 from './sortUint16';\nimport sortUint32 from './sortUint32';\nimport sortUint8 from './sortUint8';\n\n/* eslint import/no-anonymous-default-export: [2, {\"allowObject\": true}] */\nexport default {\n\tsort,\n\tsortFloat32,\n\tsortInt16,\n\tsortInt32,\n\tsortInt8,\n\tsortUint16,\n\tsortUint32,\n\tsortUint8\n};\n\nexport {\n\tsort,\n\tsortFloat32,\n\tsortInt16,\n\tsortInt32,\n\tsortInt8,\n\tsortUint16,\n\tsortUint32,\n\tsortUint8\n};\n",
+    "name": "src/array/api/sort.js",
+    "content": "import assert from 'assert';\nimport sortFixedLengthTuples from '../core/sortFixedLengthTuples.js';\nimport sortArbitraryTuples from '../core/sortArbitraryTuples.js';\n\nconst sort = (k, M, tuples) => {\n\tassert(Number.isInteger(k));\n\tassert(Number.isInteger(M));\n\tconsole.debug('sort', k, tuples);\n\tif (k === 0) {\n\t\treturn tuples;\n\t}\n\n\tconst N = tuples.length;\n\tif (N <= 1) {\n\t\treturn tuples;\n\t}\n\n\t// eslint-disable-next-line unicorn/no-new-array\n\tconst output = new Array(N);\n\tif (k >= 1) {\n\t\treturn sortFixedLengthTuples(k, M, tuples, output, 0, N);\n\t}\n\n\treturn sortArbitraryTuples(M, tuples, output);\n};\n\nexport default sort;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/api/index.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/api/sort.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
     "__docId__": 49,
-    "kind": "file",
-    "name": "src/array/api/sort.js",
-    "content": "import assert from 'assert';\nimport sortFixedLengthTuples from '../core/sortFixedLengthTuples';\nimport sortArbitraryTuples from '../core/sortArbitraryTuples';\n\nconst sort = (k, M, tuples) => {\n\tassert(Number.isInteger(k));\n\tassert(Number.isInteger(M));\n\tconsole.debug('sort', k, tuples);\n\tif (k === 0) {\n\t\treturn tuples;\n\t}\n\n\tconst N = tuples.length;\n\tif (N <= 1) {\n\t\treturn tuples;\n\t}\n\n\tconst output = new Array(N);\n\tif (k >= 1) {\n\t\treturn sortFixedLengthTuples(k, M, tuples, output, 0, N);\n\t}\n\n\treturn sortArbitraryTuples(M, tuples, output);\n};\n\nexport default sort;\n",
-    "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/api/sort.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 50,
     "kind": "function",
     "name": "sort",
     "memberof": "src/array/api/sort.js",
@@ -596,7 +585,7 @@
     "longname": "src/array/api/sort.js~sort",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/api/sort.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/api/sort.js",
     "importStyle": "sort",
     "description": null,
     "lineNumber": 5,
@@ -628,121 +617,18 @@
     }
   },
   {
-    "__docId__": 51,
-    "kind": "file",
-    "name": "src/array/api/sortFloat32.js",
-    "content": "import sortUint32 from './sortUint32';\n\n// http://www.codercorner.com/RadixSortRevisited.htm\n// http://stereopsis.com/radix.html\nconst floatFlip = (f) => {\n\tconst mask = -(f >>> 31) | 0x80000000;\n\treturn f ^ mask;\n};\n\nconst iFloatFlip = (f) => {\n\tconst mask = ((f >>> 31) - 1) | 0x80000000;\n\treturn f ^ mask;\n};\n\nconst sortFloat32 = (array) => {\n\t// TODO avoid copying when passed a Float32Array\n\t// but be careful to take into account byteOffset, byteLength, and length\n\tconst buffer = Float32Array.from(array).buffer;\n\tconst view = new Uint32Array(buffer);\n\tconst N = array.length;\n\tfor (let i = 0; i < N; ++i) view[i] = floatFlip(view[i]);\n\tconst output = Uint32Array.from(sortUint32(view));\n\tfor (let i = 0; i < N; ++i) output[i] = iFloatFlip(output[i]);\n\treturn new Float32Array(output.buffer);\n};\n\nexport default sortFloat32;\n",
-    "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/api/sortFloat32.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 52,
-    "kind": "function",
-    "name": "floatFlip",
-    "memberof": "src/array/api/sortFloat32.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/array/api/sortFloat32.js~floatFlip",
-    "access": "public",
-    "export": false,
-    "importPath": "@aureooms/js-radix-sort/src/array/api/sortFloat32.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 5,
-    "undocument": true,
-    "params": [
-      {
-        "name": "f",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 53,
-    "kind": "function",
-    "name": "iFloatFlip",
-    "memberof": "src/array/api/sortFloat32.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/array/api/sortFloat32.js~iFloatFlip",
-    "access": "public",
-    "export": false,
-    "importPath": "@aureooms/js-radix-sort/src/array/api/sortFloat32.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 10,
-    "undocument": true,
-    "params": [
-      {
-        "name": "f",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 54,
-    "kind": "function",
-    "name": "sortFloat32",
-    "memberof": "src/array/api/sortFloat32.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/array/api/sortFloat32.js~sortFloat32",
-    "access": "public",
-    "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/api/sortFloat32.js",
-    "importStyle": "sortFloat32",
-    "description": null,
-    "lineNumber": 15,
-    "undocument": true,
-    "params": [
-      {
-        "name": "array",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 55,
+    "__docId__": 50,
     "kind": "file",
     "name": "src/array/api/sortInt16.js",
-    "content": "import sortUint16 from './sortUint16';\n\nconst sortInt16 = (array) => {\n\tconst shift = -(2 ** 15);\n\t// TODO avoid copying back and forth\n\tconst data = Array.prototype.map.call(array, (x) => x - shift);\n\tconst output = sortUint16(data);\n\treturn Array.prototype.map.call(output, (x) => x + shift);\n};\n\nexport default sortInt16;\n",
+    "content": "import sortUint16 from './sortUint16.js';\n\nconst sortInt16 = (array) => {\n\tconst shift = -(2 ** 15);\n\t// TODO avoid copying back and forth\n\tconst data = Array.prototype.map.call(array, (x) => x - shift);\n\tconst output = sortUint16(data);\n\treturn Array.prototype.map.call(output, (x) => x + shift);\n};\n\nexport default sortInt16;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/api/sortInt16.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/api/sortInt16.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 56,
+    "__docId__": 51,
     "kind": "function",
     "name": "sortInt16",
     "memberof": "src/array/api/sortInt16.js",
@@ -752,7 +638,7 @@
     "longname": "src/array/api/sortInt16.js~sortInt16",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/api/sortInt16.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/api/sortInt16.js",
     "importStyle": "sortInt16",
     "description": null,
     "lineNumber": 3,
@@ -772,18 +658,18 @@
     }
   },
   {
-    "__docId__": 57,
+    "__docId__": 52,
     "kind": "file",
     "name": "src/array/api/sortInt32.js",
-    "content": "import sortUint32 from './sortUint32';\n\nconst sortInt32 = (array) => {\n\tconst shift = -(2 ** 31);\n\t// TODO avoid copying back and forth\n\tconst data = Array.prototype.map.call(array, (x) => x - shift);\n\tconst output = sortUint32(data);\n\treturn Array.prototype.map.call(output, (x) => x + shift);\n};\n\nexport default sortInt32;\n",
+    "content": "import sortUint32 from './sortUint32.js';\n\nconst sortInt32 = (array) => {\n\tconst shift = -(2 ** 31);\n\t// TODO avoid copying back and forth\n\tconst data = Array.prototype.map.call(array, (x) => x - shift);\n\tconst output = sortUint32(data);\n\treturn Array.prototype.map.call(output, (x) => x + shift);\n};\n\nexport default sortInt32;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/api/sortInt32.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/api/sortInt32.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 58,
+    "__docId__": 53,
     "kind": "function",
     "name": "sortInt32",
     "memberof": "src/array/api/sortInt32.js",
@@ -793,7 +679,7 @@
     "longname": "src/array/api/sortInt32.js~sortInt32",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/api/sortInt32.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/api/sortInt32.js",
     "importStyle": "sortInt32",
     "description": null,
     "lineNumber": 3,
@@ -813,18 +699,18 @@
     }
   },
   {
-    "__docId__": 59,
+    "__docId__": 54,
     "kind": "file",
     "name": "src/array/api/sortInt8.js",
-    "content": "import sortUint8 from './sortUint8';\n\nconst sortInt8 = (array) => {\n\tconst shift = -(2 ** 7);\n\t// TODO avoid copying back and forth\n\tconst data = Array.prototype.map.call(array, (x) => x - shift);\n\tconst output = sortUint8(data);\n\treturn Array.prototype.map.call(output, (x) => x + shift);\n};\n\nexport default sortInt8;\n",
+    "content": "import sortUint8 from './sortUint8.js';\n\nconst sortInt8 = (array) => {\n\tconst shift = -(2 ** 7);\n\t// TODO avoid copying back and forth\n\tconst data = Array.prototype.map.call(array, (x) => x - shift);\n\tconst output = sortUint8(data);\n\treturn Array.prototype.map.call(output, (x) => x + shift);\n};\n\nexport default sortInt8;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/api/sortInt8.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/api/sortInt8.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 60,
+    "__docId__": 55,
     "kind": "function",
     "name": "sortInt8",
     "memberof": "src/array/api/sortInt8.js",
@@ -834,7 +720,7 @@
     "longname": "src/array/api/sortInt8.js~sortInt8",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/api/sortInt8.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/api/sortInt8.js",
     "importStyle": "sortInt8",
     "description": null,
     "lineNumber": 3,
@@ -854,100 +740,18 @@
     }
   },
   {
-    "__docId__": 61,
-    "kind": "file",
-    "name": "src/array/api/sortUint16.js",
-    "content": "import sort from './sort';\n\nconst sortUint16 = (array) => {\n\tconst k = 2; // TODO make it depend on array.length\n\tconst M = 2 ** 8;\n\t// TODO avoid copying back and forth\n\tconst tuples = Array.prototype.map.call(array, (x) => [\n\t\t(x & 0xff00) >>> 8,\n\t\t(x & 0xff) >>> 0\n\t]);\n\tconst output = sort(k, M, tuples);\n\treturn Array.prototype.map.call(output, ([c, d]) => ((c << 8) | d) >>> 0);\n};\n\nexport default sortUint16;\n",
-    "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/api/sortUint16.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 62,
-    "kind": "function",
-    "name": "sortUint16",
-    "memberof": "src/array/api/sortUint16.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/array/api/sortUint16.js~sortUint16",
-    "access": "public",
-    "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/api/sortUint16.js",
-    "importStyle": "sortUint16",
-    "description": null,
-    "lineNumber": 3,
-    "undocument": true,
-    "params": [
-      {
-        "name": "array",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 63,
-    "kind": "file",
-    "name": "src/array/api/sortUint32.js",
-    "content": "import sort from './sort';\n\nconst sortUint32 = (array) => {\n\tconst k = 4; // TODO make it depend on array.length\n\tconst M = 2 ** 8; // TODO another good option is k = 3 M = 2**11\n\t// TODO avoid copying back and forth\n\tconst tuples = Array.prototype.map.call(array, (x) => [\n\t\t(x & 0xff000000) >>> 24,\n\t\t(x & 0xff0000) >>> 16,\n\t\t(x & 0xff00) >>> 8,\n\t\t(x & 0xff) >>> 0\n\t]);\n\tconst output = sort(k, M, tuples);\n\treturn Array.prototype.map.call(\n\t\toutput,\n\t\t([a, b, c, d]) => ((a << 24) | (b << 16) | (c << 8) | d) >>> 0\n\t);\n};\n\nexport default sortUint32;\n",
-    "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/api/sortUint32.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 64,
-    "kind": "function",
-    "name": "sortUint32",
-    "memberof": "src/array/api/sortUint32.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/array/api/sortUint32.js~sortUint32",
-    "access": "public",
-    "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/api/sortUint32.js",
-    "importStyle": "sortUint32",
-    "description": null,
-    "lineNumber": 3,
-    "undocument": true,
-    "params": [
-      {
-        "name": "array",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 65,
+    "__docId__": 56,
     "kind": "file",
     "name": "src/array/api/sortUint8.js",
-    "content": "import sort from './sort';\n\nconst sortUint8 = (array) => {\n\tconst k = 1; // TODO make it depend on array.length ?\n\tconst M = 2 ** 8;\n\t// TODO avoid copying back and forth\n\tconst tuples = Array.prototype.map.call(array, (x) => [(x & 0xff) >>> 0]);\n\tconst output = sort(k, M, tuples);\n\treturn Array.prototype.map.call(output, ([d]) => d >>> 0);\n};\n\nexport default sortUint8;\n",
+    "content": "import sort from './sort.js';\n\nconst sortUint8 = (array) => {\n\tconst k = 1; // TODO make it depend on array.length ?\n\tconst M = 2 ** 8;\n\t// TODO avoid copying back and forth\n\tconst tuples = Array.prototype.map.call(array, (x) => [(x & 0xff) >>> 0]);\n\tconst output = sort(k, M, tuples);\n\treturn Array.prototype.map.call(output, ([d]) => d >>> 0);\n};\n\nexport default sortUint8;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/api/sortUint8.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/api/sortUint8.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 66,
+    "__docId__": 57,
     "kind": "function",
     "name": "sortUint8",
     "memberof": "src/array/api/sortUint8.js",
@@ -957,7 +761,7 @@
     "longname": "src/array/api/sortUint8.js~sortUint8",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/api/sortUint8.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/api/sortUint8.js",
     "importStyle": "sortUint8",
     "description": null,
     "lineNumber": 3,
@@ -977,18 +781,18 @@
     }
   },
   {
-    "__docId__": 67,
+    "__docId__": 58,
     "kind": "file",
     "name": "src/array/core/accumulate.js",
     "content": "import assert from 'assert';\n\n/**\n * O(M) time where M=j-i.\n */\nconst accumulate = (array, i, j) => {\n\tassert(i >= 0 && j <= array.length);\n\tfor (++i; i < j; ++i) {\n\t\tarray[i] += array[i - 1];\n\t}\n};\n\nexport default accumulate;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/core/accumulate.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/core/accumulate.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 68,
+    "__docId__": 59,
     "kind": "function",
     "name": "accumulate",
     "memberof": "src/array/core/accumulate.js",
@@ -998,7 +802,7 @@
     "longname": "src/array/core/accumulate.js~accumulate",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/core/accumulate.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/core/accumulate.js",
     "importStyle": "accumulate",
     "description": "O(M) time where M=j-i.",
     "lineNumber": 6,
@@ -1025,18 +829,18 @@
     "return": null
   },
   {
-    "__docId__": 69,
+    "__docId__": 60,
     "kind": "file",
     "name": "src/array/core/alloc.js",
     "content": "// TODO check that this is the type that makes sense to hold counts\nconst alloc = (n) => new Int32Array(n);\nexport default alloc;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/core/alloc.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/core/alloc.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 70,
+    "__docId__": 61,
     "kind": "function",
     "name": "alloc",
     "memberof": "src/array/core/alloc.js",
@@ -1046,7 +850,7 @@
     "longname": "src/array/core/alloc.js~alloc",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/core/alloc.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/core/alloc.js",
     "importStyle": "alloc",
     "description": null,
     "lineNumber": 2,
@@ -1062,18 +866,18 @@
     "return": null
   },
   {
-    "__docId__": 71,
+    "__docId__": 62,
     "kind": "file",
     "name": "src/array/core/compose.js",
     "content": "import assert from 'assert';\n\nconst compose = (sigma, tau) => {\n\tconsole.debug('compose', sigma, tau);\n\tconst N = sigma.length;\n\tassert(sigma.length === tau.length);\n\tfor (let i = 0; i < N; ++i) {\n\t\ttau[i] = sigma[tau[i]];\n\t}\n};\n\nexport default compose;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/core/compose.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/core/compose.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 72,
+    "__docId__": 63,
     "kind": "function",
     "name": "compose",
     "memberof": "src/array/core/compose.js",
@@ -1083,7 +887,7 @@
     "longname": "src/array/core/compose.js~compose",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/core/compose.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/core/compose.js",
     "importStyle": "compose",
     "description": null,
     "lineNumber": 3,
@@ -1105,18 +909,18 @@
     "return": null
   },
   {
-    "__docId__": 73,
+    "__docId__": 64,
     "kind": "file",
     "name": "src/array/core/cumulativeHistogram.js",
-    "content": "import assert from 'assert';\nimport histogram from './histogram';\nimport accumulate from './accumulate';\n\n/**\n * O(M+N) time where N=j-i and M = ch.length - offset.\n */\nconst cumulativeHistogram = (array, i, j, ch, offset) => {\n\tassert(Number.isInteger(offset));\n\tassert(i >= 0 && i <= j && j <= array.length);\n\thistogram(array, i, j, ch, offset); // O(N)\n\taccumulate(ch, offset, ch.length); // O(M)\n};\n\nexport default cumulativeHistogram;\n",
+    "content": "import assert from 'assert';\nimport histogram from './histogram.js';\nimport accumulate from './accumulate.js';\n\n/**\n * O(M+N) time where N=j-i and M = ch.length - offset.\n */\nconst cumulativeHistogram = (array, i, j, ch, offset) => {\n\tassert(Number.isInteger(offset));\n\tassert(i >= 0 && i <= j && j <= array.length);\n\thistogram(array, i, j, ch, offset); // O(N)\n\taccumulate(ch, offset, ch.length); // O(M)\n};\n\nexport default cumulativeHistogram;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/core/cumulativeHistogram.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/core/cumulativeHistogram.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 74,
+    "__docId__": 65,
     "kind": "function",
     "name": "cumulativeHistogram",
     "memberof": "src/array/core/cumulativeHistogram.js",
@@ -1126,7 +930,7 @@
     "longname": "src/array/core/cumulativeHistogram.js~cumulativeHistogram",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/core/cumulativeHistogram.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/core/cumulativeHistogram.js",
     "importStyle": "cumulativeHistogram",
     "description": "O(M+N) time where N=j-i and M = ch.length - offset.",
     "lineNumber": 8,
@@ -1165,18 +969,18 @@
     "return": null
   },
   {
-    "__docId__": 75,
+    "__docId__": 66,
     "kind": "file",
     "name": "src/array/core/digits.js",
-    "content": "import alloc from './alloc';\nimport load from './load';\n\nexport default function* digits(tuples, i, j, s, t) {\n\tconst buffer = alloc(j - i);\n\tfor (--t; s <= t; --t) {\n\t\t// O(kN) where k = t - s\n\t\tload(t, tuples, i, j, buffer);\n\t\tyield buffer;\n\t}\n}\n",
+    "content": "import alloc from './alloc.js';\nimport load from './load.js';\n\nexport default function* digits(tuples, i, j, s, t) {\n\tconst buffer = alloc(j - i);\n\tfor (--t; s <= t; --t) {\n\t\t// O(kN) where k = t - s\n\t\tload(t, tuples, i, j, buffer);\n\t\tyield buffer;\n\t}\n}\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/core/digits.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/core/digits.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 76,
+    "__docId__": 67,
     "kind": "function",
     "name": "digits",
     "memberof": "src/array/core/digits.js",
@@ -1186,7 +990,7 @@
     "longname": "src/array/core/digits.js~digits",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/core/digits.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/core/digits.js",
     "importStyle": "digits",
     "description": null,
     "lineNumber": 4,
@@ -1226,18 +1030,18 @@
     "return": null
   },
   {
-    "__docId__": 77,
+    "__docId__": 68,
     "kind": "file",
     "name": "src/array/core/fill.js",
     "content": "const fill = (array, x, i, j) => array.fill(x, i, j);\nexport default fill;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/core/fill.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/core/fill.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 78,
+    "__docId__": 69,
     "kind": "function",
     "name": "fill",
     "memberof": "src/array/core/fill.js",
@@ -1247,7 +1051,7 @@
     "longname": "src/array/core/fill.js~fill",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/core/fill.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/core/fill.js",
     "importStyle": "fill",
     "description": null,
     "lineNumber": 1,
@@ -1281,18 +1085,18 @@
     "return": null
   },
   {
-    "__docId__": 79,
+    "__docId__": 70,
     "kind": "file",
     "name": "src/array/core/histogram.js",
     "content": "import assert from 'assert';\n\n/**\n * O(N) time where N = j - i;\n */\nconst histogram = (array, i, j, output, offset) => {\n\tassert(Number.isInteger(offset));\n\tassert(i >= 0 && j <= array.length);\n\tfor (; i < j; ++i) {\n\t\tconst key = offset + array[i];\n\t\tassert(key >= 0 && key < output.length);\n\t\t++output[key];\n\t}\n};\n\nexport default histogram;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/core/histogram.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/core/histogram.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 80,
+    "__docId__": 71,
     "kind": "function",
     "name": "histogram",
     "memberof": "src/array/core/histogram.js",
@@ -1302,7 +1106,7 @@
     "longname": "src/array/core/histogram.js~histogram",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/core/histogram.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/core/histogram.js",
     "importStyle": "histogram",
     "description": "O(N) time where N = j - i;",
     "lineNumber": 6,
@@ -1341,18 +1145,18 @@
     "return": null
   },
   {
-    "__docId__": 81,
+    "__docId__": 72,
     "kind": "file",
     "name": "src/array/core/load.js",
     "content": "import assert from 'assert';\n\nconst load = (s, tuples, i, j, buffer) => {\n\tassert(buffer.length >= j - i);\n\tfor (let pt = 0; i < j; ++i) {\n\t\tconst tuple = tuples[i];\n\t\tassert(s >= 0 && s < tuple.length);\n\t\t// Assert(0 <= tuple[s] && tuple[s] < M);\n\t\tbuffer[pt++] = tuple[s];\n\t}\n};\n\nexport default load;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/core/load.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/core/load.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 82,
+    "__docId__": 73,
     "kind": "function",
     "name": "load",
     "memberof": "src/array/core/load.js",
@@ -1362,7 +1166,7 @@
     "longname": "src/array/core/load.js~load",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/core/load.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/core/load.js",
     "importStyle": "load",
     "description": null,
     "lineNumber": 3,
@@ -1402,18 +1206,18 @@
     "return": null
   },
   {
-    "__docId__": 83,
+    "__docId__": 74,
     "kind": "file",
     "name": "src/array/core/loadLengths.js",
     "content": "const loadLengths = (tuples, i, N, buffer) => {\n\tlet maxLength = 0;\n\tfor (; i < N; ++i) {\n\t\tconst tuple = tuples[i];\n\t\tbuffer[i] = tuple.length;\n\t\tmaxLength = Math.max(maxLength, tuple.length);\n\t}\n\n\treturn maxLength + 1;\n};\n\nexport default loadLengths;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/core/loadLengths.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/core/loadLengths.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 84,
+    "__docId__": 75,
     "kind": "function",
     "name": "loadLengths",
     "memberof": "src/array/core/loadLengths.js",
@@ -1423,7 +1227,7 @@
     "longname": "src/array/core/loadLengths.js~loadLengths",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/core/loadLengths.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/core/loadLengths.js",
     "importStyle": "loadLengths",
     "description": null,
     "lineNumber": 1,
@@ -1461,18 +1265,18 @@
     }
   },
   {
-    "__docId__": 85,
+    "__docId__": 76,
     "kind": "file",
     "name": "src/array/core/permute.js",
     "content": "import assert from 'assert';\n\nconst permute = (permutation, array, ai, aj, output, oi) => {\n\tconsole.debug('permute', permutation, array, ai, aj, output, oi);\n\tassert(Number.isInteger(ai));\n\tassert(Number.isInteger(aj));\n\tassert(Number.isInteger(oi));\n\tconst N = aj - ai; // Only used in assert\n\tconst oj = oi + N; // Only used in assert\n\tassert(ai >= 0 && aj <= array.length);\n\tassert(permutation.length >= N);\n\tassert(oi >= 0 && oj <= output.length);\n\tfor (let i = 0; i < N; ++i) {\n\t\tassert(permutation[i] >= 0 && permutation[i] < N);\n\t\toutput[oi + permutation[i]] = array[ai + i];\n\t}\n};\n\nexport default permute;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/core/permute.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/core/permute.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 86,
+    "__docId__": 77,
     "kind": "function",
     "name": "permute",
     "memberof": "src/array/core/permute.js",
@@ -1482,7 +1286,7 @@
     "longname": "src/array/core/permute.js~permute",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/core/permute.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/core/permute.js",
     "importStyle": "permute",
     "description": null,
     "lineNumber": 3,
@@ -1528,18 +1332,18 @@
     "return": null
   },
   {
-    "__docId__": 87,
+    "__docId__": 78,
     "kind": "file",
     "name": "src/array/core/permuteInPlace.js",
     "content": "import assert from 'assert';\n\nconst permuteInPlace = (permutation, array) => {\n\tassert(permutation.length === array.length);\n\tconst N = permutation.length;\n\tfor (let i = 0; i < N; ++i) {\n\t\t// Exhaust all cycles\n\t\tlet j = permutation[i];\n\t\twhile (i !== j) {\n\t\t\tlet temporary = array[j];\n\t\t\tarray[j] = array[i];\n\t\t\tarray[i] = temporary;\n\t\t\ttemporary = j;\n\t\t\tj = permutation[j];\n\t\t\tpermutation[j] = temporary;\n\t\t}\n\t}\n};\n\nexport default permuteInPlace;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/core/permuteInPlace.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/core/permuteInPlace.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 88,
+    "__docId__": 79,
     "kind": "function",
     "name": "permuteInPlace",
     "memberof": "src/array/core/permuteInPlace.js",
@@ -1549,7 +1353,7 @@
     "longname": "src/array/core/permuteInPlace.js~permuteInPlace",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/core/permuteInPlace.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/core/permuteInPlace.js",
     "importStyle": "permuteInPlace",
     "description": null,
     "lineNumber": 3,
@@ -1571,18 +1375,18 @@
     "return": null
   },
   {
-    "__docId__": 89,
+    "__docId__": 80,
     "kind": "file",
     "name": "src/array/core/rank.js",
     "content": "import assert from 'assert';\n\n/**\n * O(n) time.\n *\n * @param {Array} ch The cumulative histogram of the input.\n * @param {Array} array The input array to sort.\n * @param {Number} i Inclusive left boundary of the array.\n * @param {Number} j Non-inclusive right boundary of the array.\n * @param {Array} permutation The output permutation.\n */\nconst rank = (ch, array, i, j, permutation) => {\n\tassert(i >= 0 && j <= array.length);\n\tassert(i >= 0 && j <= permutation.length);\n\tfor (; i < j; ++i) {\n\t\tassert(array[i] >= 0 && array[i] < ch.length);\n\t\tassert(ch[array[i]] >= 0 && ch[array[i]] < permutation.length);\n\t\tpermutation[i] = ch[array[i]]++;\n\t}\n};\n\nexport default rank;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/core/rank.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/core/rank.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 90,
+    "__docId__": 81,
     "kind": "function",
     "name": "rank",
     "memberof": "src/array/core/rank.js",
@@ -1592,7 +1396,7 @@
     "longname": "src/array/core/rank.js~rank",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/core/rank.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/core/rank.js",
     "importStyle": "rank",
     "description": "O(n) time.",
     "lineNumber": 12,
@@ -1651,18 +1455,18 @@
     "return": null
   },
   {
-    "__docId__": 91,
+    "__docId__": 82,
     "kind": "file",
     "name": "src/array/core/reset.js",
-    "content": "import fill from './fill';\nconst reset = (array, i, j) => fill(array, 0, i, j);\nexport default reset;\n",
+    "content": "import fill from './fill.js';\n\nconst reset = (array, i, j) => fill(array, 0, i, j);\nexport default reset;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/core/reset.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/core/reset.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 92,
+    "__docId__": 83,
     "kind": "function",
     "name": "reset",
     "memberof": "src/array/core/reset.js",
@@ -1672,10 +1476,10 @@
     "longname": "src/array/core/reset.js~reset",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/core/reset.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/core/reset.js",
     "importStyle": "reset",
     "description": null,
-    "lineNumber": 2,
+    "lineNumber": 3,
     "undocument": true,
     "params": [
       {
@@ -1700,18 +1504,18 @@
     "return": null
   },
   {
-    "__docId__": 93,
+    "__docId__": 84,
     "kind": "file",
     "name": "src/array/core/sortArbitraryTuples.js",
-    "content": "import permute from './permute';\nimport sortTuplesByLength from './sortTuplesByLength';\nimport sortFixedLengthTuples from './sortFixedLengthTuples';\n\nconst sortArbitraryTuples = (M, tuples, output) => {\n\tconst N = tuples.length;\n\tconst [ch, permutation] = sortTuplesByLength(tuples);\n\tpermute(permutation, tuples, 0, N, output, 0); // O(N)\n\tconst groups = ch.length - 1;\n\tconsole.debug('sortArbitraryTuples', ch, groups);\n\tfor (let g = 1; g < groups; ++g) {\n\t\tconst i = ch[g - 1];\n\t\tconst j = ch[g];\n\t\tsortFixedLengthTuples(g, M, output, tuples, i, j); // TODO this modifies the input array\n\t}\n\n\treturn tuples;\n};\n\nexport default sortArbitraryTuples;\n",
+    "content": "import permute from './permute.js';\nimport sortTuplesByLength from './sortTuplesByLength.js';\nimport sortFixedLengthTuples from './sortFixedLengthTuples.js';\n\nconst sortArbitraryTuples = (M, tuples, output) => {\n\tconst N = tuples.length;\n\tconst [ch, permutation] = sortTuplesByLength(tuples);\n\tpermute(permutation, tuples, 0, N, output, 0); // O(N)\n\tconst groups = ch.length - 1;\n\tconsole.debug('sortArbitraryTuples', ch, groups);\n\tfor (let g = 1; g < groups; ++g) {\n\t\tconst i = ch[g - 1];\n\t\tconst j = ch[g];\n\t\tsortFixedLengthTuples(g, M, output, tuples, i, j); // TODO this modifies the input array\n\t}\n\n\treturn tuples;\n};\n\nexport default sortArbitraryTuples;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/core/sortArbitraryTuples.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/core/sortArbitraryTuples.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 94,
+    "__docId__": 85,
     "kind": "function",
     "name": "sortArbitraryTuples",
     "memberof": "src/array/core/sortArbitraryTuples.js",
@@ -1721,7 +1525,7 @@
     "longname": "src/array/core/sortArbitraryTuples.js~sortArbitraryTuples",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/core/sortArbitraryTuples.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/core/sortArbitraryTuples.js",
     "importStyle": "sortArbitraryTuples",
     "description": null,
     "lineNumber": 5,
@@ -1753,18 +1557,18 @@
     }
   },
   {
-    "__docId__": 95,
+    "__docId__": 86,
     "kind": "file",
     "name": "src/array/core/sortFixedLengthTuples.js",
-    "content": "import assert from 'assert';\nimport alloc from './alloc';\nimport load from './load';\nimport digits from './digits';\nimport stable from './stable';\nimport permute from './permute';\n\n/**\n * O(kM + kN) time where k is the number of digits per tuple, M is the radix, and\n * N = j - i is the number of tuples. The product kN corresponds to the input size.\n */\nconst sortFixedLengthTuples = (k, M, tuples, output, i, j) => {\n\tconsole.debug('sortFixedLengthTuples', k, M, tuples, output, i, j);\n\tassert(k >= 1);\n\tconst N = j - i;\n\tassert(N >= 2);\n\tconst first = alloc(N);\n\tload(k - 1, tuples, i, j, first);\n\tconst rest = digits(tuples, i, j, 0, k - 1);\n\tconst permutation = stable(M, first, rest); // O(kN + kM)\n\tconsole.debug(permutation, tuples);\n\tpermute(permutation, tuples, i, j, output, i); // O(N)\n\treturn output;\n};\n\nexport default sortFixedLengthTuples;\n",
+    "content": "import assert from 'assert';\nimport alloc from './alloc.js';\nimport load from './load.js';\nimport digits from './digits.js';\nimport stable from './stable.js';\nimport permute from './permute.js';\n\n/**\n * O(kM + kN) time where k is the number of digits per tuple, M is the radix, and\n * N = j - i is the number of tuples. The product kN corresponds to the input size.\n */\nconst sortFixedLengthTuples = (k, M, tuples, output, i, j) => {\n\tconsole.debug('sortFixedLengthTuples', k, M, tuples, output, i, j);\n\tassert(k >= 1);\n\tconst N = j - i;\n\tassert(N >= 2);\n\tconst first = alloc(N);\n\tload(k - 1, tuples, i, j, first);\n\tconst rest = digits(tuples, i, j, 0, k - 1);\n\tconst permutation = stable(M, first, rest); // O(kN + kM)\n\tconsole.debug(permutation, tuples);\n\tpermute(permutation, tuples, i, j, output, i); // O(N)\n\treturn output;\n};\n\nexport default sortFixedLengthTuples;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/core/sortFixedLengthTuples.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/core/sortFixedLengthTuples.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 96,
+    "__docId__": 87,
     "kind": "function",
     "name": "sortFixedLengthTuples",
     "memberof": "src/array/core/sortFixedLengthTuples.js",
@@ -1774,7 +1578,7 @@
     "longname": "src/array/core/sortFixedLengthTuples.js~sortFixedLengthTuples",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/core/sortFixedLengthTuples.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/core/sortFixedLengthTuples.js",
     "importStyle": "sortFixedLengthTuples",
     "description": "O(kM + kN) time where k is the number of digits per tuple, M is the radix, and\nN = j - i is the number of tuples. The product kN corresponds to the input size.",
     "lineNumber": 12,
@@ -1823,18 +1627,18 @@
     }
   },
   {
-    "__docId__": 97,
+    "__docId__": 88,
     "kind": "file",
     "name": "src/array/core/sortTuplesByLength.js",
-    "content": "import assert from 'assert';\nimport alloc from './alloc';\nimport zeros from './zeros';\nimport cumulativeHistogram from './cumulativeHistogram';\nimport rank from './rank';\n\nimport loadLengths from './loadLengths';\n\n/**\n * O(M + N) time where M is the maximum length of a tuple, and\n * N is the number of tuples.\n */\nconst sortTuplesByLength = (tuples) => {\n\tconsole.debug('sortTuplesByLength', tuples);\n\tassert(tuples !== undefined);\n\tconst N = tuples.length;\n\tconst lengths = alloc(N);\n\tconst M = loadLengths(tuples, 0, N, lengths);\n\tconst ch = zeros(M + 1); // O(M)\n\tcumulativeHistogram(lengths, 0, N, ch, 1); // O(N)\n\tconsole.debug('sortTuplesByLength step', lengths, ch);\n\tassert(ch[0] === 0);\n\tconst permutation = alloc(N);\n\trank(ch, lengths, 0, lengths.length, permutation); // O(N)\n\treturn [ch, permutation];\n};\n\nexport default sortTuplesByLength;\n",
+    "content": "import assert from 'assert';\nimport alloc from './alloc.js';\nimport zeros from './zeros.js';\nimport cumulativeHistogram from './cumulativeHistogram.js';\nimport rank from './rank.js';\n\nimport loadLengths from './loadLengths.js';\n\n/**\n * O(M + N) time where M is the maximum length of a tuple, and\n * N is the number of tuples.\n */\nconst sortTuplesByLength = (tuples) => {\n\tconsole.debug('sortTuplesByLength', tuples);\n\tassert(tuples !== undefined);\n\tconst N = tuples.length;\n\tconst lengths = alloc(N);\n\tconst M = loadLengths(tuples, 0, N, lengths);\n\tconst ch = zeros(M + 1); // O(M)\n\tcumulativeHistogram(lengths, 0, N, ch, 1); // O(N)\n\tconsole.debug('sortTuplesByLength step', lengths, ch);\n\tassert(ch[0] === 0);\n\tconst permutation = alloc(N);\n\trank(ch, lengths, 0, lengths.length, permutation); // O(N)\n\treturn [ch, permutation];\n};\n\nexport default sortTuplesByLength;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/core/sortTuplesByLength.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/core/sortTuplesByLength.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 98,
+    "__docId__": 89,
     "kind": "function",
     "name": "sortTuplesByLength",
     "memberof": "src/array/core/sortTuplesByLength.js",
@@ -1844,7 +1648,7 @@
     "longname": "src/array/core/sortTuplesByLength.js~sortTuplesByLength",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/core/sortTuplesByLength.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/core/sortTuplesByLength.js",
     "importStyle": "sortTuplesByLength",
     "description": "O(M + N) time where M is the maximum length of a tuple, and\nN is the number of tuples.",
     "lineNumber": 13,
@@ -1863,18 +1667,18 @@
     }
   },
   {
-    "__docId__": 99,
+    "__docId__": 90,
     "kind": "file",
     "name": "src/array/core/stable.js",
-    "content": "import assert from 'assert';\nimport {_identity} from '@aureooms/js-permutation';\nimport alloc from './alloc';\nimport zeros from './zeros';\nimport reset from './reset';\nimport cumulativeHistogram from './cumulativeHistogram';\nimport rank from './rank';\nimport permute from './permute';\nimport compose from './compose';\n\n/**\n * O(kM + kN) time where k is the number of arrays, M is the radix, and\n * N is the length of each array. The product kN corresponds to the input size.\n */\nconst stable = (M, current, rest) => {\n\tconsole.debug('stable', M, current, rest);\n\tassert(current !== undefined);\n\tconst N = current.length;\n\tconst permutation1 = alloc(N);\n\t_identity(permutation1, N); // TODO Not needed if rest is empty (k=1)\n\tconst ch = zeros(M + 1); // O(M)\n\t// eslint-disable-next-line no-constant-condition\n\twhile (true) {\n\t\t// Repeated k times.\n\t\tcumulativeHistogram(current, 0, N, ch, 1); // O(N)\n\t\tconsole.debug('stable step', current, ch);\n\t\tassert(ch[0] === 0);\n\t\tconst permutation2 = alloc(N);\n\t\trank(ch, current, 0, current.length, permutation2); // O(N)\n\t\tcompose(permutation2, permutation1);\n\t\tconst {value: next, done} = rest.next();\n\t\tif (done) {\n\t\t\treturn permutation1;\n\t\t}\n\n\t\tassert(next.length === N);\n\t\tpermute(permutation1, next, 0, N, current, 0);\n\t\treset(ch); // O(M)\n\t}\n};\n\nexport default stable;\n",
+    "content": "import assert from 'assert';\nimport {_identity} from '@combinatorics/permutation';\nimport alloc from './alloc.js';\nimport zeros from './zeros.js';\nimport reset from './reset.js';\nimport cumulativeHistogram from './cumulativeHistogram.js';\nimport rank from './rank.js';\nimport permute from './permute.js';\nimport compose from './compose.js';\n\n/**\n * O(kM + kN) time where k is the number of arrays, M is the radix, and\n * N is the length of each array. The product kN corresponds to the input size.\n */\nconst stable = (M, current, rest) => {\n\tconsole.debug('stable', M, current, rest);\n\tassert(current !== undefined);\n\tconst N = current.length;\n\tconst permutation1 = alloc(N);\n\t_identity(permutation1, N); // TODO Not needed if rest is empty (k=1)\n\tconst ch = zeros(M + 1); // O(M)\n\t// eslint-disable-next-line no-constant-condition\n\twhile (true) {\n\t\t// Repeated k times.\n\t\tcumulativeHistogram(current, 0, N, ch, 1); // O(N)\n\t\tconsole.debug('stable step', current, ch);\n\t\tassert(ch[0] === 0);\n\t\tconst permutation2 = alloc(N);\n\t\trank(ch, current, 0, current.length, permutation2); // O(N)\n\t\tcompose(permutation2, permutation1);\n\t\tconst {value: next, done} = rest.next();\n\t\tif (done) {\n\t\t\treturn permutation1;\n\t\t}\n\n\t\tassert(next.length === N);\n\t\tpermute(permutation1, next, 0, N, current, 0);\n\t\treset(ch); // O(M)\n\t}\n};\n\nexport default stable;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/core/stable.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/core/stable.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 100,
+    "__docId__": 91,
     "kind": "function",
     "name": "stable",
     "memberof": "src/array/core/stable.js",
@@ -1884,7 +1688,7 @@
     "longname": "src/array/core/stable.js~stable",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/core/stable.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/core/stable.js",
     "importStyle": "stable",
     "description": "O(kM + kN) time where k is the number of arrays, M is the radix, and\nN is the length of each array. The product kN corresponds to the input size.",
     "lineNumber": 15,
@@ -1915,18 +1719,18 @@
     }
   },
   {
-    "__docId__": 101,
+    "__docId__": 92,
     "kind": "file",
     "name": "src/array/core/zeros.js",
     "content": "const zeros = (n) => new Int32Array(n);\nexport default zeros;\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/array/core/zeros.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/array/core/zeros.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 102,
+    "__docId__": 93,
     "kind": "function",
     "name": "zeros",
     "memberof": "src/array/core/zeros.js",
@@ -1936,7 +1740,7 @@
     "longname": "src/array/core/zeros.js~zeros",
     "access": "public",
     "export": true,
-    "importPath": "@aureooms/js-radix-sort/src/array/core/zeros.js",
+    "importPath": "@integer-sorting/radix-sort/src/array/core/zeros.js",
     "importStyle": "zeros",
     "description": null,
     "lineNumber": 1,
@@ -1952,28 +1756,28 @@
     "return": null
   },
   {
-    "__docId__": 103,
+    "__docId__": 94,
     "kind": "file",
     "name": "src/index.js",
-    "content": "import {\n\tsort,\n\tsortFloat32,\n\tsortInt16,\n\tsortInt32,\n\tsortInt8,\n\tsortUint16,\n\tsortUint32,\n\tsortUint8\n} from './array/api';\n\n/* eslint import/no-anonymous-default-export: [2, {\"allowObject\": true}] */\nexport default {\n\tsort,\n\tsortFloat32,\n\tsortInt16,\n\tsortInt32,\n\tsortInt8,\n\tsortUint16,\n\tsortUint32,\n\tsortUint8\n};\n\nexport {\n\tsort,\n\tsortFloat32,\n\tsortInt16,\n\tsortInt32,\n\tsortInt8,\n\tsortUint16,\n\tsortUint32,\n\tsortUint8\n};\n",
+    "content": "export {default as sort} from './array/api/sort.js';\nexport {default as sortInt16} from './array/api/sortInt16.js';\nexport {default as sortFloat32} from './array/api/sortFloat32.js';\nexport {default as sortInt8} from './array/api/sortInt8.js';\nexport {default as sortInt32} from './array/api/sortInt32.js';\nexport {default as sortUint32} from './array/api/sortUint32.js';\nexport {default as sortUint16} from './array/api/sortUint16.js';\nexport {default as sortUint8} from './array/api/sortUint8.js';\n",
     "static": true,
-    "longname": "/home/aureooms/dev/js/js-radix-sort/src/index.js",
+    "longname": "/home/runner/work/radix-sort/radix-sort/src/index.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
     "kind": "index",
-    "content": ":oden: [@aureooms/js-radix-sort](https://aureooms.github.io/js-radix-sort)\n==\n\nRadix sorting algorithms for JavaScript.\nParent is [@aureooms/js-sort](https://github.com/aureooms/js-sort).\n\n[![License](https://img.shields.io/github/license/aureooms/js-radix-sort.svg)](https://raw.githubusercontent.com/aureooms/js-radix-sort/main/LICENSE)\n[![Version](https://img.shields.io/npm/v/@aureooms/js-radix-sort.svg)](https://www.npmjs.org/package/@aureooms/js-radix-sort)\n[![Build](https://img.shields.io/travis/aureooms/js-radix-sort/main.svg)](https://travis-ci.org/aureooms/js-radix-sort/branches)\n[![Dependencies](https://img.shields.io/david/aureooms/js-radix-sort.svg)](https://david-dm.org/aureooms/js-radix-sort)\n[![Dev dependencies](https://img.shields.io/david/dev/aureooms/js-radix-sort.svg)](https://david-dm.org/aureooms/js-radix-sort?type=dev)\n[![GitHub issues](https://img.shields.io/github/issues/aureooms/js-radix-sort.svg)](https://github.com/aureooms/js-radix-sort/issues)\n[![Downloads](https://img.shields.io/npm/dm/@aureooms/js-radix-sort.svg)](https://www.npmjs.org/package/@aureooms/js-radix-sort)\n\n[![Code issues](https://img.shields.io/codeclimate/issues/aureooms/js-radix-sort.svg)](https://codeclimate.com/github/aureooms/js-radix-sort/issues)\n[![Code maintainability](https://img.shields.io/codeclimate/maintainability/aureooms/js-radix-sort.svg)](https://codeclimate.com/github/aureooms/js-radix-sort/trends/churn)\n[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-radix-sort/main.svg)](https://codecov.io/gh/aureooms/js-radix-sort)\n[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/aureooms/js-radix-sort.svg)](https://codeclimate.com/github/aureooms/js-radix-sort/trends/technical_debt)\n[![Documentation](https://aureooms.github.io/js-radix-sort//badge.svg)](https://aureooms.github.io/js-radix-sort//source.html)\n[![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-radix-sort)](https://bundlephobia.com/result?p=@aureooms/js-radix-sort)\n",
-    "longname": "/home/aureooms/dev/js/js-radix-sort/README.md",
+    "content": ":oden:\n[@integer-sorting/radix-sort](https://integer-sorting.github.io/radix-sort)\n==\n\nRadix sorting algorithms for JavaScript.\nParent is [js-sorting](https://github.com/make-github-pseudonymous-again/js-sorting).\n\n[![License](https://img.shields.io/github/license/integer-sorting/radix-sort.svg)](https://raw.githubusercontent.com/integer-sorting/radix-sort/main/LICENSE)\n[![Version](https://img.shields.io/npm/v/@integer-sorting/radix-sort.svg)](https://www.npmjs.org/package/@integer-sorting/radix-sort)\n[![Tests](https://img.shields.io/github/workflow/status/integer-sorting/radix-sort/ci:test?event=push&label=tests)](https://github.com/integer-sorting/radix-sort/actions/workflows/ci:test.yml?query=branch:main)\n[![Dependencies](https://img.shields.io/librariesio/github/integer-sorting/radix-sort.svg)](https://github.com/integer-sorting/radix-sort/network/dependencies)\n[![GitHub issues](https://img.shields.io/github/issues/integer-sorting/radix-sort.svg)](https://github.com/integer-sorting/radix-sort/issues)\n[![Downloads](https://img.shields.io/npm/dm/@integer-sorting/radix-sort.svg)](https://www.npmjs.org/package/@integer-sorting/radix-sort)\n\n[![Code issues](https://img.shields.io/codeclimate/issues/integer-sorting/radix-sort.svg)](https://codeclimate.com/github/integer-sorting/radix-sort/issues)\n[![Code maintainability](https://img.shields.io/codeclimate/maintainability/integer-sorting/radix-sort.svg)](https://codeclimate.com/github/integer-sorting/radix-sort/trends/churn)\n[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/integer-sorting/radix-sort/main.svg)](https://codecov.io/gh/integer-sorting/radix-sort)\n[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/integer-sorting/radix-sort.svg)](https://codeclimate.com/github/integer-sorting/radix-sort/trends/technical_debt)\n[![Documentation](https://integer-sorting.github.io/radix-sort/badge.svg)](https://integer-sorting.github.io/radix-sort/source.html)\n[![Package size](https://img.shields.io/bundlephobia/minzip/@integer-sorting/radix-sort)](https://bundlephobia.com/result?p=@integer-sorting/radix-sort)\n",
+    "longname": "/home/runner/work/radix-sort/radix-sort/README.md",
     "name": "./README.md",
     "static": true,
     "access": "public"
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"@aureooms/js-radix-sort\",\n  \"description\": \"Radix sorting algorithms for JavaScript\",\n  \"version\": \"2.0.1\",\n  \"author\": \"aureooms\",\n  \"ava\": {\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"require\": [\n      \"regenerator-runtime/runtime\",\n      \"@babel/register\"\n    ],\n    \"timeout\": \"1m\"\n  },\n  \"babel\": {\n    \"presets\": [\n      \"@babel/preset-env\"\n    ],\n    \"env\": {\n      \"test\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ],\n        \"plugins\": [\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ],\n        \"sourceMaps\": \"inline\"\n      },\n      \"development\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ],\n        \"plugins\": [\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ],\n        \"sourceMaps\": \"inline\"\n      },\n      \"production\": {\n        \"plugins\": [\n          \"babel-plugin-unassert\",\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ],\n        \"sourceMaps\": \"inline\"\n      }\n    }\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/aureooms/js-radix-sort/issues\"\n  },\n  \"dependencies\": {\n    \"@aureooms/js-permutation\": \"^2.0.0\"\n  },\n  \"devDependencies\": {\n    \"@aureooms/js-compare\": \"1.4.8\",\n    \"@aureooms/js-itertools\": \"4.1.0\",\n    \"@aureooms/js-random\": \"2.0.0\",\n    \"@babel/cli\": \"7.12.10\",\n    \"@babel/core\": \"7.12.10\",\n    \"@babel/preset-env\": \"7.12.10\",\n    \"@babel/register\": \"7.12.10\",\n    \"ava\": \"3.14.0\",\n    \"babel-plugin-transform-remove-console\": \"6.9.4\",\n    \"babel-plugin-unassert\": \"3.0.1\",\n    \"babel-preset-power-assert\": \"3.0.0\",\n    \"coveralls\": \"3.1.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"np\": \"7.0.0\",\n    \"nyc\": \"15.1.0\",\n    \"power-assert\": \"1.6.1\",\n    \"regenerator-runtime\": \"0.13.7\",\n    \"xo\": \"0.36.1\"\n  },\n  \"files\": [\n    \"lib\"\n  ],\n  \"homepage\": \"http://aureooms.github.io/js-radix-sort/\",\n  \"keywords\": [\n    \"agpl\",\n    \"algorithms\",\n    \"javascript\",\n    \"linear-time\",\n    \"radix\",\n    \"radix-sort\",\n    \"radix-sort-algorithm\",\n    \"sorting\",\n    \"sorting-algorithms\",\n    \"word-ram\",\n    \"word-ram-model\"\n  ],\n  \"license\": \"AGPL-3.0\",\n  \"main\": \"lib/index.js\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/aureooms/js-radix-sort.git\"\n  },\n  \"scripts\": {\n    \"build\": \"babel --delete-dir-on-start --env-name production src -d lib\",\n    \"cover\": \"nyc --reporter=lcov npm test\",\n    \"dev\": \"npm run lint -- --fix && npm run cover -- -- -st --fail-fast\",\n    \"esdoc\": \"esdoc\",\n    \"lint\": \"xo\",\n    \"prepare\": \"npm run build\",\n    \"release\": \"np\",\n    \"test\": \"ava\",\n    \"travis\": \"npm run lint && npm run cover\"\n  },\n  \"sideEffects\": false,\n  \"xo\": {\n    \"prettier\": true,\n    \"rules\": {\n      \"unicorn/filename-case\": [\n        \"error\",\n        {\n          \"case\": \"camelCase\"\n        }\n      ]\n    },\n    \"ignores\": [\n      \"lib\",\n      \"doc\",\n      \"test/_old\"\n    ]\n  }\n}\n",
-    "longname": "/home/aureooms/dev/js/js-radix-sort/package.json",
+    "content": "{\n  \"name\": \"@integer-sorting/radix-sort\",\n  \"description\": \"Radix sorting algorithms for JavaScript\",\n  \"version\": \"3.0.0\",\n  \"license\": \"AGPL-3.0\",\n  \"author\": \"make-github-pseudonymous-again\",\n  \"homepage\": \"https://integer-sorting.github.io/radix-sort\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/integer-sorting/radix-sort\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/integer-sorting/radix-sort/issues\"\n  },\n  \"keywords\": [\n    \"agpl\",\n    \"algorithms\",\n    \"javascript\",\n    \"linear-time\",\n    \"radix\",\n    \"radix-sort\",\n    \"radix-sort-algorithm\",\n    \"sorting\",\n    \"sorting-algorithms\",\n    \"word-ram\",\n    \"word-ram-model\"\n  ],\n  \"sideEffects\": false,\n  \"type\": \"module\",\n  \"source\": \"src/index.js\",\n  \"main\": \"dist/index.cjs\",\n  \"module\": \"dist/index.module.js\",\n  \"esmodule\": \"dist/index.modern.js\",\n  \"umd:main\": \"dist/index.umd.js\",\n  \"unpkg\": \"dist/index.umd.js\",\n  \"exports\": {\n    \".\": {\n      \"browser\": \"./dist/index.module.js\",\n      \"umd\": \"./dist/index.umd.js\",\n      \"require\": \"./dist/index.cjs\",\n      \"default\": \"./dist/index.modern.js\"\n    }\n  },\n  \"files\": [\n    \"dist\"\n  ],\n  \"publishConfig\": {\n    \"access\": \"public\"\n  },\n  \"scripts\": {\n    \"build\": \"NODE_ENV=production microbundle\",\n    \"build-docs\": \"esdoc\",\n    \"build-gh-pages\": \"npm run build-docs\",\n    \"ci:build\": \"npm run build\",\n    \"ci:test\": \"npm run lint-config && npm run lint && npm run cover\",\n    \"commit-msg\": \"commitlint --edit\",\n    \"cover\": \"NODE_ENV=cover c8 --all --src src --reporter lcov --reporter text-summary --reporter text npm test\",\n    \"debug\": \"NODE_ENV=debug npm run test -- -st --fail-fast\",\n    \"dev\": \"npm run lint-config-and-fix && npm run lint-and-fix && npm run cover -- -- -st --fail-fast\",\n    \"install-hooks\": \"husky install\",\n    \"lint\": \"xo\",\n    \"lint-and-fix\": \"npm run lint -- --fix\",\n    \"lint-config\": \"fixpack --dryRun\",\n    \"lint-config-and-fix\": \"fixpack || fixpack\",\n    \"postinstall\": \"npm run install-hooks\",\n    \"postpublish\": \"pinst --enable\",\n    \"precommit\": \"lint-staged\",\n    \"prepare\": \"npm run build\",\n    \"prepublishOnly\": \"pinst --disable\",\n    \"release\": \"np --message ':hatching_chick: release: Bumping to v%s.'\",\n    \"test\": \"npm run test:src\",\n    \"test-cmd\": \"NODE_LOADER_CONFIG=test/loader/config.js ava\",\n    \"test:cjs\": \"IMPORT_MAP_PATH=test/import-maps/dist/index.json npm run test-cmd\",\n    \"test:dist\": \"npm run test:modern && npm run test:module && npm run test:cjs\",\n    \"test:modern\": \"IMPORT_MAP_PATH=test/import-maps/dist/index.modern.json npm run test-cmd\",\n    \"test:module\": \"IMPORT_MAP_PATH=test/import-maps/dist/index.module.json npm run test-cmd\",\n    \"test:src\": \"IMPORT_MAP_PATH=test/import-maps/src/index.json npm run test-cmd\"\n  },\n  \"dependencies\": {\n    \"@combinatorics/permutation\": \"^4.0.0\"\n  },\n  \"devDependencies\": {\n    \"@babel/core\": \"7.16.5\",\n    \"@babel/preset-env\": \"7.16.5\",\n    \"@commitlint/cli\": \"15.0.0\",\n    \"@iterable-iterator/list\": \"1.0.1\",\n    \"@iterable-iterator/map\": \"1.0.1\",\n    \"@iterable-iterator/range\": \"2.1.0\",\n    \"@iterable-iterator/reduce\": \"1.0.1\",\n    \"@iterable-iterator/repeat\": \"1.0.1\",\n    \"@iterable-iterator/sorted\": \"1.0.0\",\n    \"@iterable-iterator/zip\": \"1.0.1\",\n    \"@js-library/commitlint-config\": \"0.0.4\",\n    \"@node-loader/babel\": \"2.0.0\",\n    \"@node-loader/core\": \"2.0.0\",\n    \"@node-loader/import-maps\": \"1.0.3\",\n    \"@randomized/random\": \"4.0.0\",\n    \"@total-order/lex\": \"1.0.0\",\n    \"@total-order/primitive\": \"1.0.1\",\n    \"ava\": \"4.0.0-rc.1\",\n    \"babel-plugin-transform-remove-console\": \"6.9.4\",\n    \"babel-plugin-unassert\": \"3.2.0\",\n    \"babel-preset-power-assert\": \"3.0.0\",\n    \"c8\": \"7.10.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"fixpack\": \"4.0.0\",\n    \"husky\": \"7.0.4\",\n    \"lint-staged\": \"12.1.3\",\n    \"microbundle\": \"0.14.2\",\n    \"np\": \"7.6.0\",\n    \"pinst\": \"2.1.6\",\n    \"power-assert\": \"1.6.1\",\n    \"regenerator-runtime\": \"0.13.9\",\n    \"xo\": \"0.47.0\"\n  },\n  \"ava\": {\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"require\": [\n      \"regenerator-runtime/runtime\"\n    ],\n    \"nodeArguments\": [\n      \"--experimental-loader=@node-loader/core\"\n    ],\n    \"timeout\": \"1m\"\n  },\n  \"babel\": {\n    \"sourceMaps\": true,\n    \"plugins\": [\n      [\n        \"transform-remove-console\",\n        {\n          \"exclude\": [\n            \"log\",\n            \"error\",\n            \"warn\"\n          ]\n        }\n      ]\n    ],\n    \"env\": {\n      \"debug\": {\n        \"sourceMaps\": \"both\",\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ],\n        \"plugins\": [\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"debug\",\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ]\n      },\n      \"test\": {\n        \"sourceMaps\": \"both\",\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"cover\": {\n        \"sourceMaps\": \"both\",\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"development\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ],\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"production\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ]\n        ],\n        \"plugins\": [\n          \"babel-plugin-unassert\"\n        ]\n      }\n    }\n  },\n  \"lint-staged\": {\n    \"*.js\": [\n      \"npm run lint-and-fix\"\n    ],\n    \"package.json\": [\n      \"npm run lint-config-and-fix\"\n    ]\n  },\n  \"prettier\": {\n    \"trailingComma\": \"all\"\n  },\n  \"xo\": {\n    \"prettier\": true,\n    \"rules\": {\n      \"no-bitwise\": \"off\",\n      \"unicorn/filename-case\": [\n        \"error\",\n        {\n          \"case\": \"camelCase\"\n        }\n      ],\n      \"unicorn/prefer-node-protocol\": \"off\"\n    },\n    \"overrides\": [\n      {\n        \"files\": [\n          \"doc/**\"\n        ],\n        \"env\": \"browser\"\n      }\n    ]\n  }\n}\n",
+    "longname": "/home/runner/work/radix-sort/radix-sort/package.json",
     "name": "package.json",
     "static": true,
     "access": "public"
@@ -1988,7 +1792,7 @@
   },
   {
     "kind": "manual",
-    "longname": "/home/aureooms/dev/js/js-radix-sort/doc/manual/overview.md",
+    "longname": "/home/runner/work/radix-sort/radix-sort/doc/manual/overview.md",
     "name": "./doc/manual/overview.md",
     "content": "# Overview\n",
     "static": true,
@@ -1996,25 +1800,25 @@
   },
   {
     "kind": "manual",
-    "longname": "/home/aureooms/dev/js/js-radix-sort/doc/manual/installation.md",
+    "longname": "/home/runner/work/radix-sort/radix-sort/doc/manual/installation.md",
     "name": "./doc/manual/installation.md",
-    "content": "# Installation\n\nCan be managed using\n[yarn](https://yarnpkg.com/en/docs),\n[npm](https://docs.npmjs.com),\nor [jspm](https://jspm.org/docs).\n\n\n### yarn\n```terminal\nyarn add @aureooms/js-radix-sort\n```\n\n### npm\n```terminal\nnpm install @aureooms/js-radix-sort --save\n```\n\n### jspm\n```terminal\njspm install npm:@aureooms/js-radix-sort\n```\n",
+    "content": "# Installation\n\nCan be managed using\n[yarn](https://yarnpkg.com/en/docs),\n[npm](https://docs.npmjs.com),\nor [jspm](https://jspm.org/docs).\n\n\n### yarn\n```terminal\nyarn add @integer-sorting/radix-sort\n```\n\n### npm\n```terminal\nnpm install @integer-sorting/radix-sort --save\n```\n\n### jspm\n```terminal\njspm install npm:@integer-sorting/radix-sort\n```\n",
     "static": true,
     "access": "public"
   },
   {
     "kind": "manual",
-    "longname": "/home/aureooms/dev/js/js-radix-sort/doc/manual/usage.md",
+    "longname": "/home/runner/work/radix-sort/radix-sort/doc/manual/usage.md",
     "name": "./doc/manual/usage.md",
-    "content": "# Usage\n\n> :warning: The code requires `regeneratorRuntime` to be defined, for instance by importing\n> [regenerator-runtime/runtime](https://www.npmjs.com/package/regenerator-runtime).\n\nFirst, require the polyfill at the entry point of your application\n```js\nrequire( 'regenerator-runtime/runtime' );\n// or\nimport 'regenerator-runtime/runtime.js' ;\n```\n\nThen, import the library where needed\n```js\nconst radixsort = require( '@aureooms/js-radix-sort' ) ;\n// or\nimport * as radixsort from '@aureooms/js-radix-sort' ;\n```\n",
+    "content": "# Usage\n\n> :warning: The code requires `regeneratorRuntime` to be defined, for instance by importing\n> [regenerator-runtime/runtime](https://www.npmjs.com/package/regenerator-runtime).\n\nFirst, require the polyfill at the entry point of your application\n```js\nawait import( 'regenerator-runtime/runtime.js' );\n// or\nimport 'regenerator-runtime/runtime.js' ;\n```\n\nThen, import the library where needed\n```js\nconst radixsort = await import( '@integer-sorting/radix-sort' ) ;\n// or\nimport * as radixsort from '@integer-sorting/radix-sort' ;\n```\n",
     "static": true,
     "access": "public"
   },
   {
     "kind": "manual",
-    "longname": "/home/aureooms/dev/js/js-radix-sort/doc/manual/example.md",
+    "longname": "/home/runner/work/radix-sort/radix-sort/doc/manual/example.md",
     "name": "./doc/manual/example.md",
-    "content": "# Examples\n\n> More examples in [the test files](https://github.com/aureooms/js-radix-sort/tree/main/test/src).\n",
+    "content": "# Examples\n\n> More examples in [the test files](https://github.com/integer-sorting/radix-sort/tree/main/test/src).\n",
     "static": true,
     "access": "public"
   }

@@ -1,6 +1,6 @@
 {
-  "coverage": "25%",
-  "expectCount": 28,
+  "coverage": "30.43%",
+  "expectCount": 23,
   "actualCount": 7,
   "files": {
     "src/array/api/sort.js": {
@@ -8,15 +8,6 @@
       "actualCount": 0,
       "undocumentLines": [
         5
-      ]
-    },
-    "src/array/api/sortFloat32.js": {
-      "expectCount": 3,
-      "actualCount": 0,
-      "undocumentLines": [
-        5,
-        10,
-        15
       ]
     },
     "src/array/api/sortInt16.js": {
@@ -34,20 +25,6 @@
       ]
     },
     "src/array/api/sortInt8.js": {
-      "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        3
-      ]
-    },
-    "src/array/api/sortUint16.js": {
-      "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        3
-      ]
-    },
-    "src/array/api/sortUint32.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
@@ -141,7 +118,7 @@
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
-        2
+        3
       ]
     },
     "src/array/core/sortArbitraryTuples.js": {
