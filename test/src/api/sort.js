@@ -1,4 +1,4 @@
-import {AssertionError} from 'assert';
+import assert from 'assert';
 import test from 'ava';
 import {list} from '@iterable-iterator/list';
 import {all} from '@iterable-iterator/reduce';
@@ -24,7 +24,7 @@ limbs.title = (title, k, M, data) =>
 	title || `sort(${k}, ${M}, ${JSON.stringify(data)})`;
 
 const throws = (t, k, M, data) => {
-	t.throws(() => sort(k, M, data.slice()), {instanceOf: AssertionError});
+	t.throws(() => sort(k, M, data.slice()), {instanceOf: assert.AssertionError});
 };
 
 throws.title = (title, k, M, data) =>
