@@ -44,8 +44,8 @@ test(limbs, 2, 2, [[1]]);
 test(limbs, 0, 2, [[1], [0]]);
 
 // Assertions
-test(throws, 2, 2, [[1], [0]]);
-test(throws, 3, 3, [
+test('k is too large', throws, 2, 2, [[1], [0]]);
+test('M is too small', throws, 3, 3, [
 	[2, 1, 3],
 	[3, 2, 1],
 	[1, 2, 3],
