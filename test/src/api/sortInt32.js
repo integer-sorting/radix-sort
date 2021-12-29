@@ -3,14 +3,18 @@ import {sorted} from '@iterable-iterator/sorted';
 import {range} from '@iterable-iterator/range';
 import {list} from '@iterable-iterator/list';
 import {map} from '@iterable-iterator/map';
-import {shuffle, randrange} from '@randomized/random';
 import {increasing} from '@total-order/primitive';
 
-import sortInt32 from '../../../src/array/api/sortInt32.js';
+import {sortInt32} from '../../../src/index.js';
+
+import {entropy} from '../_fixtures.js';
+
+const seed = [123, 456];
+const {shuffle, randrange} = entropy(seed);
 
 const macro = (t, data) => {
-	const result = sortInt32(data.slice());
-	const expected = sorted(increasing, data);
+	const result = sortInt32(data);
+	const expected = Int32Array.from(sorted(increasing, data));
 	t.deepEqual(expected, result);
 };
 

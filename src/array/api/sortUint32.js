@@ -1,20 +1,14 @@
-import sort from './sort.js';
+import _sortUint32 from './_sortUint32.js';
 
+/**
+ * Sorts an array of uint32 non-destructively.
+ *
+ * @param {number[]|Uint32Array} array
+ * @return {Uint32Array}
+ */
 const sortUint32 = (array) => {
-	const k = 4; // TODO make it depend on array.length
-	const M = 2 ** 8; // TODO another good option is k = 3 M = 2**11
-	// TODO avoid copying back and forth
-	const tuples = Array.prototype.map.call(array, (x) => [
-		(x & 0xff_00_00_00) >>> 24,
-		(x & 0xff_00_00) >>> 16,
-		(x & 0xff_00) >>> 8,
-		(x & 0xff) >>> 0,
-	]);
-	const output = sort(k, M, tuples);
-	return Array.prototype.map.call(
-		output,
-		([a, b, c, d]) => ((a << 24) | (b << 16) | (c << 8) | d) >>> 0,
-	);
+	const copy = Uint32Array.from(array, (x) => x >>> 0);
+	return _sortUint32(copy);
 };
 
 export default sortUint32;

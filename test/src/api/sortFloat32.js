@@ -2,22 +2,19 @@ import test from 'ava';
 import {sorted} from '@iterable-iterator/sorted';
 import {range} from '@iterable-iterator/range';
 import {list} from '@iterable-iterator/list';
-import {shuffle} from '@randomized/random';
 import {increasing} from '@total-order/primitive';
 
-import sortFloat32 from '../../../src/array/api/sortFloat32.js';
+import {sortFloat32} from '../../../src/index.js';
 
-const randomFloat32 = () => {
-	const sign = Math.random() < 0.5 ? 1 : -1;
-	const base = (Math.random() - 0.5) * 100;
-	const exponent = (Math.random() - 0.5) * 100;
-	return sign * Math.exp(base, exponent);
-};
+import {entropy} from '../_fixtures.js';
+
+const seed = [123, 456];
+const {shuffle, randomFloat32} = entropy(seed);
 
 const macro = (t, data) => {
-	const result = sortFloat32(data.slice());
+	const actual = sortFloat32(data.slice());
 	const expected = Float32Array.from(sorted(increasing, data));
-	t.deepEqual(expected, result);
+	t.deepEqual(actual, expected);
 };
 
 const repr = (data) =>

@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@arithmetic-type/uint64@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@arithmetic-type/uint64/-/uint64-4.0.0.tgz#c76b82919f9d309eaff38d5cf875ac1a7ca497b6"
+  integrity sha512-oMpwI5Ka8dsmRqG9EMdKct1737DeMzd7B8F9d5cuE/PrMXy10y1hvls/JmogN/1H+S0ZTJ+2ObU2EqjCvw7FeA==
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.16.0":
   version "7.16.0"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.16.0.tgz#0dfc80309beec8411e65e706461c408b0bb9b431"
@@ -1896,6 +1901,13 @@
   integrity sha512-X4xqRHqN8ACt2aHVe51OxeA2HjbcL4MqFqXkrmQszJ1NOUuUu5u6Vqx/0lZSVNku7velL5FC/s5uEAj1lsBMhA==
   dependencies:
     "@cspotcode/source-map-consumer" "0.8.0"
+
+"@entropy-source/pseudo-random@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@entropy-source/pseudo-random/-/pseudo-random-4.0.0.tgz#a91d57e356e0c11ead53abaf4a9e91246ef5f109"
+  integrity sha512-1tvVXXYVMMSUGPo/qp9UGsw0Fqo5JqxZ2PnVwoDSwfqUS0zPWt1KLO3zReL+9W4P/XTLtGMDyDSXSLZ13LU1wA==
+  dependencies:
+    "@arithmetic-type/uint64" "^4.0.0"
 
 "@eslint/eslintrc@^1.0.4", "@eslint/eslintrc@^1.0.5":
   version "1.0.5"

@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@array-like/alloc": "^0.0.1",
+    "@array-like/copy": "^0.0.1",
+    "@array-like/fill": "^0.0.1",
+    "@comparison-sorting/is-sorted": "^0.0.1",
+    "@iterable-iterator/sorted": "^1.0.0",
+    "@total-order/primitive": "^1.0.1",
+    "benchmark": "^2.1.4",
+    "radixsort": "^1.0.1",
+    "regenerator-runtime": "^0.13.9",
+    "total-order": "^4.0.1"
+  }
+}

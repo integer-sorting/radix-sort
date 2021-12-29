@@ -3,11 +3,11 @@ import assert from 'assert';
 /**
  * O(n) time.
  *
- * @param {Array} ch The cumulative histogram of the input.
- * @param {Array} array The input array to sort.
- * @param {Number} i Inclusive left boundary of the array.
- * @param {Number} j Non-inclusive right boundary of the array.
- * @param {Array} permutation The output permutation.
+ * @param {Int32Array} ch The cumulative histogram of the input.
+ * @param {number[]} array The input array to sort.
+ * @param {number} i Inclusive left boundary of the array.
+ * @param {number} j Non-inclusive right boundary of the array.
+ * @param {Int32Array} permutation The output permutation.
  */
 const rank = (ch, array, i, j, permutation) => {
 	assert(i >= 0 && j <= array.length);

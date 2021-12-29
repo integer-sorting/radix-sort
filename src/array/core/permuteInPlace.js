@@ -6,13 +6,13 @@ const permuteInPlace = (permutation, array) => {
 	for (let i = 0; i < N; ++i) {
 		// Exhaust all cycles
 		let j = permutation[i];
-		while (i !== j) {
-			let temporary = array[j];
+		while (j !== i) {
+			const aj = array[j];
 			array[j] = array[i];
-			array[i] = temporary;
-			temporary = j;
+			array[i] = aj;
+			const l = j;
 			j = permutation[j];
-			permutation[j] = temporary;
+			permutation[l] = l;
 		}
 	}
 };

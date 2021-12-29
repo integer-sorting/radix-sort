@@ -3,10 +3,14 @@ import {sorted} from '@iterable-iterator/sorted';
 import {range} from '@iterable-iterator/range';
 import {list} from '@iterable-iterator/list';
 import {map} from '@iterable-iterator/map';
-import {shuffle, randrange} from '@randomized/random';
 import {increasing} from '@total-order/primitive';
 
-import sortUint8 from '../../../src/array/api/sortUint8.js';
+import {sortUint8} from '../../../src/index.js';
+
+import {entropy} from '../_fixtures.js';
+
+const seed = [123, 456];
+const {shuffle, randrange} = entropy(seed);
 
 const macro = (t, data) => {
 	const result = sortUint8(data.slice());

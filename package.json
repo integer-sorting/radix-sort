@@ -83,6 +83,7 @@
     "@babel/core": "7.16.7",
     "@babel/preset-env": "7.16.7",
     "@commitlint/cli": "16.0.1",
+    "@entropy-source/pseudo-random": "^4.0.0",
     "@iterable-iterator/list": "1.0.1",
     "@iterable-iterator/map": "1.0.1",
     "@iterable-iterator/range": "2.1.0",
@@ -220,13 +221,10 @@
   "xo": {
     "prettier": true,
     "rules": {
+      "camelcase": "off",
       "no-bitwise": "off",
-      "unicorn/filename-case": [
-        "error",
-        {
-          "case": "camelCase"
-        }
-      ],
+      "unicorn/prefer-math-trunc": "off",
+      "unicorn/filename-case": "off",
       "unicorn/prefer-node-protocol": "off"
     },
     "overrides": [

@@ -1,7 +1,7 @@
 import assert from 'assert';
 import alloc from './alloc.js';
 import load from './load.js';
-import digits from './digits.js';
+import Digits from './Digits.js';
 import stable from './stable.js';
 import permute from './permute.js';
 
@@ -16,7 +16,7 @@ const sortFixedLengthTuples = (k, M, tuples, output, i, j) => {
 	assert(N >= 2);
 	const first = alloc(N);
 	load(k - 1, tuples, i, j, first);
-	const rest = digits(tuples, i, j, 0, k - 1);
+	const rest = new Digits(tuples, i, j, 0, k - 1);
 	const permutation = stable(M, first, rest); // O(kN + kM)
 	console.debug(permutation, tuples);
 	permute(permutation, tuples, i, j, output, i); // O(N)

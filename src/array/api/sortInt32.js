@@ -1,11 +1,14 @@
-import sortUint32 from './sortUint32.js';
+import _sortInt32 from './_sortInt32.js';
 
+/**
+ * Sorts an array of int32 non-destructively.
+ *
+ * @param {number[]|Int32Array} array
+ * @return {Int32Array}
+ */
 const sortInt32 = (array) => {
-	const shift = -(2 ** 31);
-	// TODO avoid copying back and forth
-	const data = Array.prototype.map.call(array, (x) => x - shift);
-	const output = sortUint32(data);
-	return Array.prototype.map.call(output, (x) => x + shift);
+	const copy = Int32Array.from(array, (x) => x | 0);
+	return _sortInt32(copy);
 };
 
 export default sortInt32;
