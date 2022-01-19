@@ -80,8 +80,8 @@
     "@combinatorics/permutation": "^4.0.0"
   },
   "devDependencies": {
-    "@babel/core": "7.16.7",
-    "@babel/preset-env": "7.16.8",
+    "@babel/core": "7.16.10",
+    "@babel/preset-env": "7.16.10",
     "@commitlint/cli": "16.0.2",
     "@iterable-iterator/list": "1.0.1",
     "@iterable-iterator/map": "1.0.1",
