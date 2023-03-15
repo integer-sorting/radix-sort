@@ -2184,9 +2184,9 @@
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
 "@combinatorics/permutation@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@combinatorics/permutation/-/permutation-4.0.0.tgz#fe04774e2be676c9dbca45997b75d33797280da5"
-  integrity sha512-IjWebTYfhPG+1n3BBS4mfdlNtwevGrWK0IQf1TDeU+GerkrKQDyqsQ86k1JmFQ/bMHVl0HJRYLpN47s/UtNopQ==
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@combinatorics/permutation/-/permutation-4.0.1.tgz#d2de16f745ee3b1994a98ce90a33276be8a58445"
+  integrity sha512-avheUVr41i0bKTyBS2Xb1vTnLI1aw2L2Xz2/vMtk52IveiXCnR1e5xOWoVUWpWuM1M9H9qkclMPbnK5vNCJ/Nw==
 
 "@commitlint/cli@17.4.4":
   version "17.4.4"
