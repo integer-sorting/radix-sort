@@ -1,9 +1,10 @@
 import assert from 'assert';
+
 import alloc from './alloc.js';
-import load from './load.js';
 import digits from './digits.js';
-import stable from './stable.js';
+import load from './load.js';
 import permute from './permute.js';
+import stable from './stable.js';
 
 /**
  * O(kM + kN) time where k is the number of digits per tuple, M is the radix, and

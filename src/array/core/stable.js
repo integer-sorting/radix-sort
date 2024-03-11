@@ -1,12 +1,14 @@
 import assert from 'assert';
+
 import {_identity} from '@combinatorics/permutation';
+
 import alloc from './alloc.js';
-import zeros from './zeros.js';
-import reset from './reset.js';
-import cumulativeHistogram from './cumulativeHistogram.js';
-import rank from './rank.js';
-import permute from './permute.js';
 import compose from './compose.js';
+import cumulativeHistogram from './cumulativeHistogram.js';
+import permute from './permute.js';
+import rank from './rank.js';
+import reset from './reset.js';
+import zeros from './zeros.js';
 
 /**
  * O(kM + kN) time where k is the number of arrays, M is the radix, and

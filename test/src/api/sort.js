@@ -1,8 +1,10 @@
 import assert from 'assert';
+
 import test from 'ava';
+
 import {list} from '@iterable-iterator/list';
-import {all} from '@iterable-iterator/reduce';
 import {map} from '@iterable-iterator/map';
+import {all} from '@iterable-iterator/reduce';
 import {sorted} from '@iterable-iterator/sorted';
 import {fixedlexicographical, quasilexicographical} from '@total-order/lex';
 import {increasing} from '@total-order/primitive';

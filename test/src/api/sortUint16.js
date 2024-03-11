@@ -1,8 +1,9 @@
 import test from 'ava';
-import {sorted} from '@iterable-iterator/sorted';
-import {range} from '@iterable-iterator/range';
+
 import {list} from '@iterable-iterator/list';
 import {map} from '@iterable-iterator/map';
+import {range} from '@iterable-iterator/range';
+import {sorted} from '@iterable-iterator/sorted';
 import {shuffle, randrange} from '@randomized/random';
 import {increasing} from '@total-order/primitive';
 

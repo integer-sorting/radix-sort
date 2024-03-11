@@ -1,6 +1,7 @@
 import assert from 'assert';
-import histogram from './histogram.js';
+
 import accumulate from './accumulate.js';
+import histogram from './histogram.js';
 
 /**
  * O(M+N) time where N=j-i and M = ch.length - offset.

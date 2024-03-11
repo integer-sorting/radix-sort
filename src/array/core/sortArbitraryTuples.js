@@ -1,6 +1,6 @@
 import permute from './permute.js';
-import sortTuplesByLength from './sortTuplesByLength.js';
 import sortFixedLengthTuples from './sortFixedLengthTuples.js';
+import sortTuplesByLength from './sortTuplesByLength.js';
 
 const sortArbitraryTuples = (M, tuples, output) => {
 	const N = tuples.length;

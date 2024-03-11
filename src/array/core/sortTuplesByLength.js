@@ -1,10 +1,10 @@
 import assert from 'assert';
-import alloc from './alloc.js';
-import zeros from './zeros.js';
-import cumulativeHistogram from './cumulativeHistogram.js';
-import rank from './rank.js';
 
+import alloc from './alloc.js';
+import cumulativeHistogram from './cumulativeHistogram.js';
 import loadLengths from './loadLengths.js';
+import rank from './rank.js';
+import zeros from './zeros.js';
 
 /**
  * O(M + N) time where M is the maximum length of a tuple, and
