@@ -7,7 +7,7 @@ Parent is [js-sorting](https://github.com/make-github-pseudonymous-again/js-sort
 
 [![License](https://img.shields.io/github/license/integer-sorting/radix-sort.svg)](https://raw.githubusercontent.com/integer-sorting/radix-sort/main/LICENSE)
 [![Version](https://img.shields.io/npm/v/@integer-sorting/radix-sort.svg)](https://www.npmjs.org/package/@integer-sorting/radix-sort)
-[![Tests](https://img.shields.io/github/workflow/status/integer-sorting/radix-sort/ci?event=push&label=tests)](https://github.com/integer-sorting/radix-sort/actions/workflows/ci.yml?query=branch:main)
+[![Tests](https://img.shields.io/github/actions/workflow/status/integer-sorting/radix-sort/ci.yml?branch=main&event=push&label=tests)](https://github.com/integer-sorting/radix-sort/actions/workflows/ci.yml?query=branch:main)
 [![Dependencies](https://img.shields.io/librariesio/github/integer-sorting/radix-sort.svg)](https://github.com/integer-sorting/radix-sort/network/dependencies)
 [![GitHub issues](https://img.shields.io/github/issues/integer-sorting/radix-sort.svg)](https://github.com/integer-sorting/radix-sort/issues)
 [![Downloads](https://img.shields.io/npm/dm/@integer-sorting/radix-sort.svg)](https://www.npmjs.org/package/@integer-sorting/radix-sort)
